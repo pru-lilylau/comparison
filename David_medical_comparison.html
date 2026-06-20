@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>醫療保障方案詳細對比 · David</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'Noto Sans TC',sans-serif;background:#f4f2ee;color:#1a1a1a;font-size:14px;line-height:1.6;padding:20px;}
+  .page{max-width:920px;margin:0 auto;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 4px 32px rgba(0,0,0,0.08);}
+
+  .header{background:#1a1a1a;padding:22px 32px;display:flex;justify-content:space-between;align-items:center;}
+  .eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#b8925a;margin-bottom:5px;}
+  .htitle{font-family:'Noto Serif TC',serif;font-size:19px;color:#fff;font-weight:700;}
+  .hright{text-align:right;color:rgba(255,255,255,0.5);font-size:13px;line-height:1.8;}
+
+  /* ── TABLE ── */
+  .sec{padding:0 32px 0;}
+  .sec-title{padding:14px 0 8px;font-size:12px;letter-spacing:3px;text-transform:uppercase;display:flex;align-items:center;gap:8px;color:#999;border-bottom:2px solid #1a1a1a;}
+  .dot{width:8px;height:8px;border-radius:50%;}
+  .dot-teal{background:#2d6b6b;}
+  .dot-gold{background:#b8925a;}
+
+  table{width:100%;border-collapse:collapse;margin-bottom:0;}
+
+  /* Column headers */
+  .col-headers{display:grid;grid-template-columns:2fr 1fr 1fr;gap:0;border-bottom:1px solid #e0dbd4;}
+  .ch{padding:12px 14px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#aaa;}
+  .ch.a{background:#fdfaf5;text-align:center;border-left:1px solid #f0ece6;}
+  .ch.b{background:#fff;text-align:center;border-left:1px solid #f0ece6;}
+  .ch .pname{font-family:'Noto Serif TC',serif;font-size:14px;font-weight:700;color:#1a1a1a;display:block;margin-bottom:2px;}
+  .ch .peng{font-size:12px;color:#aaa;font-weight:normal;letter-spacing:0;}
+  .ch .ptag{display:inline-block;margin-top:4px;background:#b8925a;color:#fff;font-size:9px;padding:2px 7px;border-radius:10px;letter-spacing:1px;}
+
+  /* Rows */
+  .row{display:grid;grid-template-columns:2fr 1fr 1fr;gap:0;border-bottom:1px solid #f0ece6;}
+  .row:hover .rc,.row:hover .ra,.row:hover .rb{background:#fafaf8;}
+  .row.cat .rc{background:#f7f5f1;font-size:12px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:#888;padding:8px 14px;grid-column:1/-1;}
+  .row.cat{grid-template-columns:1fr;}
+
+  .rc{padding:9px 14px;font-size:14px;color:#555;display:flex;align-items:center;}
+  .ra{padding:9px 14px;background:#fdfaf5;text-align:center;border-left:1px solid #f0ece6;display:flex;align-items:center;justify-content:center;font-size:14px;}
+  .rb{padding:9px 14px;background:#fff;text-align:center;border-left:1px solid #f0ece6;display:flex;align-items:center;justify-content:center;font-size:14px;}
+
+  .yes{color:#2d6b6b;font-weight:600;}
+  .no{color:#ccc;}
+  .warn{color:#c0392b;font-weight:600;}
+  .gold{color:#b8925a;font-weight:600;}
+  .num{font-weight:700;}
+
+  .badge-rec{display:inline-block;background:#e8f2f2;color:#2d6b6b;font-size:9px;padding:2px 6px;border-radius:10px;margin-left:4px;vertical-align:middle;}
+  .badge-warn{display:inline-block;background:#fdf0ee;color:#c0392b;font-size:9px;padding:2px 6px;border-radius:10px;margin-left:4px;vertical-align:middle;}
+
+  .divider{height:1px;background:#f0ece6;margin:0 32px;}
+
+  /* SUMMARY */
+  .summary{background:#1a1a1a;display:grid;grid-template-columns:1fr 1fr;margin-top:0;}
+  .sb{padding:16px 28px;border-right:1px solid rgba(255,255,255,0.08);font-size:13px;color:rgba(255,255,255,0.6);}
+  .sb:last-child{border-right:none;}
+  .st{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#b8925a;margin-bottom:4px;}
+  .sr{color:#fff;font-weight:500;font-size:14px;margin-bottom:3px;}
+
+  .footer{padding:12px 32px;font-size:12px;color:#bbb;display:flex;justify-content:space-between;border-top:1px solid #f0ece6;}
+  .footer strong{color:#888;}
+
+  @media (max-width:640px){
+    .col-headers,.row{grid-template-columns:1fr 1fr 1fr;}
+    .header{flex-direction:column;align-items:flex-start;gap:8px;}
+    .hright{text-align:left;}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <div>
+    <div class="eyebrow">保誠保險 · 產品對比</div>
+    <div class="htitle">David 先生 · 醫療保障規劃</div>
+  </div>
+  <div class="hright">46歲 · 男 · 進出口貿易<br>製表：Lily Lau · 2026年6月</div>
+</div>
+
+<!-- ══════════════════════════════
+     醫療 SECTION
+════════════════════════════════ -->
+<div class="sec">
+  <div class="sec-title"><span class="dot dot-teal"></span>醫療保障 · 兩個高端方案對比</div>
+
+  <!-- Column Headers -->
+  <div class="col-headers">
+    <div class="ch"></div>
+    <div class="ch a">
+      <span class="pname">自願醫保尚賓計劃</span>
+      <span class="peng">PruHealth VHIS VIP Plan</span>
+      <span class="ptag">VHIS 認可</span>
+    </div>
+    <div class="ch b">
+      <span class="pname">高端醫療自由行計劃</span>
+      <span class="peng">PremierFlex Medical Plan</span>
+      <span class="ptag" style="background:#2d6b6b;">保障規模更大</span>
+    </div>
+  </div>
+
+  <!-- 基本資料 -->
+  <div class="row cat"><div class="rc">💰 基本資料與稅務</div></div>
+  <div class="row">
+    <div class="rc">是否VHIS認可產品</div>
+    <div class="ra"><span class="yes">✓ 是</span></div>
+    <div class="rb"><span class="no">✗ 否</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">稅務扣除</div>
+    <div class="ra"><span class="yes num">每年每人上限 $8,000</span></div>
+    <div class="rb"><span class="no">✗ 無</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">投保年齡</div>
+    <div class="ra">15日至80歲</div>
+    <div class="rb">0至69歲</div>
+  </div>
+  <div class="row">
+    <div class="rc">投保資格</div>
+    <div class="ra"><span class="warn">只限香港居民</span></div>
+    <div class="rb"><span class="yes">不設居民限制</span></div>
+  </div>
+
+  <!-- 保障地區與金額 -->
+  <div class="row cat"><div class="rc">🌍 保障地區與金額</div></div>
+  <div class="row">
+    <div class="rc">保障地區選項</div>
+    <div class="ra">亞洲（含澳紐）／全球（美國除外）— 2個選項</div>
+    <div class="rb"><span class="gold">大中華／全球（美國除外）／全球 — 4個方案</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">每年最高保障額</div>
+    <div class="ra"><span class="num">$12,000,000（劃一）</span></div>
+    <div class="rb"><span class="num yes">$500萬–$3,000萬（按方案）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">終身賠償限額</div>
+    <div class="ra"><span class="num">$56,000,000（劃一）</span></div>
+    <div class="rb"><span class="num yes">$2,400萬–$7,000萬（按方案）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">自付額選項</div>
+    <div class="ra">$0／$20,000／$50,000／$96,000</div>
+    <div class="rb">$0 或（內地$1萬＋其他$3萬）</div>
+  </div>
+  <div class="row">
+    <div class="rc">自付額後之賠償方式</div>
+    <div class="ra"><span class="yes">✓ 住院、手術、深切治療、專科醫生、診斷檢測、癌症治療、意外門診牙科、透析等主要項目，全數賠償、不設分項限額（受限於年／終身保障限額）</span></div>
+    <div class="rb"><span class="yes">✓ 同樣設有全數保障機制，主要醫療項目不設分項限額（部分復康／門診寶項目設獨立上限）</span></div>
+  </div>
+
+  <!-- 受保病房 -->
+  <div class="row cat"><div class="rc">🛏 受保病房</div></div>
+  <div class="row">
+    <div class="rc">中國內地</div>
+    <div class="ra"><span class="warn">半私家病房</span></div>
+    <div class="rb"><span class="yes">標準單人間（含特需／國際部）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">香港／澳門</div>
+    <div class="ra">半私家病房</div>
+    <div class="rb">半私家（方案1-2）／私家（方案3-4）</div>
+  </div>
+  <div class="row">
+    <div class="rc">其他地區</div>
+    <div class="ra"><span class="yes">私家病房</span></div>
+    <div class="rb"><span class="yes">私家病房</span></div>
+  </div>
+
+  <!-- 增值服務 -->
+  <div class="row cat"><div class="rc">🤝 增值服務網絡</div></div>
+  <div class="row">
+    <div class="rc">內地醫療綠色通道</div>
+    <div class="ra">約1,200間醫院</div>
+    <div class="rb"><span class="yes num">逾1,700間三甲醫院</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">醫療費用直付</div>
+    <div class="ra"><span class="yes">✓ 有</span></div>
+    <div class="rb"><span class="yes">✓ 有（覆蓋內地公立醫院）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">第二醫療意見</div>
+    <div class="ra"><span class="yes">✓ 安心醫</span></div>
+    <div class="rb"><span class="yes">✓ 內地三甲＋海外美／日（重大疾病）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">全球找藥／藥品折扣</div>
+    <div class="ra"><span class="no">✗ 無</span></div>
+    <div class="rb"><span class="yes">✓ 有</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">重疾專案管理／心理諮詢</div>
+    <div class="ra"><span class="no">✗ 無</span></div>
+    <div class="rb"><span class="yes">✓ 有</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">大灣區跨境癌症治療直付</div>
+    <div class="ra"><span class="no">✗ 無</span></div>
+    <div class="rb"><span class="yes">✓ 有</span></div>
+  </div>
+
+  <!-- 治療與重病保障 -->
+  <div class="row cat"><div class="rc">🛡 治療與重病保障</div></div>
+  <div class="row">
+    <div class="rc">訂明非手術癌症治療</div>
+    <div class="ra"><span class="yes">化療／放射／標靶／免疫／荷爾蒙</span></div>
+    <div class="rb"><span class="yes gold">同左，另加質子／重離子／CAR-T</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">個人使用癌症藥物（未註冊進口藥）</div>
+    <div class="ra"><span class="no">✗ 無</span></div>
+    <div class="rb"><span class="yes">✓ 有（限香港）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">住院精神科治療</div>
+    <div class="ra"><span class="yes">全數保障</span></div>
+    <div class="rb"><span class="warn">$40,000–$60,000／年（非全數）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">兒童發展障礙治療</div>
+    <div class="ra"><span class="no">✗ 無</span></div>
+    <div class="rb"><span class="yes">✓ 有（0–17歲）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">妊娠期併發症</div>
+    <div class="ra"><span class="yes">✓ 有（等候300日）</span></div>
+    <div class="rb"><span class="yes">✓ 有（等候300日）</span></div>
+  </div>
+
+  <!-- 健康檢查與其他 -->
+  <div class="row cat"><div class="rc">📋 健康檢查與其他</div></div>
+  <div class="row">
+    <div class="rc">健康檢查頻率</div>
+    <div class="ra">每3次續保後1年（第4/7/10年）</div>
+    <div class="rb"><span class="yes">每2次續保後1年（第3/5/7年）</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">日常門診保障</div>
+    <div class="ra"><span class="no">✗ 不設獨立選項</span></div>
+    <div class="rb"><span class="yes">✓ 可加保「門診寶」</span></div>
+  </div>
+  <div class="row">
+    <div class="rc">善終服務</div>
+    <div class="ra"><span class="no">✗ 沒有單列</span></div>
+    <div class="rb"><span class="yes">✓ 有（終身限一次）</span></div>
+  </div>
+  <div class="row" style="border-bottom:none;">
+    <div class="rc">身故保障（恩恤＋意外）</div>
+    <div class="ra">合共 $160,000</div>
+    <div class="rb">合共 $160,000</div>
+  </div>
+</div>
+
+<!-- SUMMARY -->
+<div class="summary">
+  <div class="sb">
+    <div class="st">尚賓計劃 · 適合對象</div>
+    <div class="sr">重視VHIS認可＋稅務扣除</div>
+    每年保障 $1,200萬 · 終身 $5,600萬<br>
+    適合：每年想慳稅、主要留港或亞洲就醫的客戶
+  </div>
+  <div class="sb">
+    <div class="st">自由行計劃 · 適合對象</div>
+    <div class="sr">重視保障規模＋內地醫療網絡</div>
+    每年保障可達 $3,000萬 · 終身可達 $7,000萬<br>
+    適合：經常往來內地、重視保障上限及重疾支援的客戶
+  </div>
+</div>
+
+<div class="footer">
+  <span>⚠️ 兩個計劃均屬高端醫療方案，一般情況下客戶會從中選擇其一，所有數字以官方宣傳資料為基礎，實際保障以保單條款及核保結果為準</span>
+  <span><strong>Lily Lau</strong> · 保誠理財顧問 · @pru_lilylau</span>
+</div>
+
+</div>
+</body>
+</html>
