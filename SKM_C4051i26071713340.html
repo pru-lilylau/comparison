@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>王彭森先生 保單分析 — 識數嘅媽媽理財師</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+  :root {
+    --paper: #F5F2EC;
+    --ink: #1E2B26;
+    --ink-soft: #4A5750;
+    --jade: #3F6B5C;
+    --jade-deep: #2A4A3F;
+    --brick: #A6473A;
+    --brick-soft: #F1DFD9;
+    --gold: #B08D4F;
+    --line: #D8D2C4;
+    --card: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Sans TC', sans-serif;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap { max-width: 920px; margin: 0 auto; padding: 0 24px 100px; }
+
+  /* HERO */
+  .hero {
+    background: linear-gradient(160deg, var(--jade-deep) 0%, var(--jade) 100%);
+    color: var(--paper);
+    padding: 64px 24px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; right: -60px; top: -60px;
+    width: 260px; height: 260px;
+    border: 1px solid rgba(245,242,236,0.15);
+    border-radius: 50%;
+  }
+  .hero::before {
+    content: "";
+    position: absolute; right: 40px; bottom: -80px;
+    width: 180px; height: 180px;
+    border: 1px solid rgba(245,242,236,0.12);
+    border-radius: 50%;
+  }
+  .hero-inner { max-width: 920px; margin: 0 auto; position: relative; }
+  .eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #C9DCC9;
+    margin: 0 0 18px;
+  }
+  .hero h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 900;
+    font-size: clamp(28px, 5vw, 42px);
+    margin: 0 0 14px;
+    letter-spacing: 0.01em;
+  }
+  .hero p.sub {
+    font-size: 16px;
+    color: #DCE9DC;
+    max-width: 60ch;
+    margin: 0 0 28px;
+  }
+  .profile-row {
+    display: flex; flex-wrap: wrap; gap: 10px;
+  }
+  .chip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.5px;
+    background: rgba(245,242,236,0.12);
+    border: 1px solid rgba(245,242,236,0.25);
+    padding: 6px 12px;
+    border-radius: 100px;
+    color: #F0F4EE;
+  }
+
+  section { padding: 56px 0 8px; }
+  .section-head { margin-bottom: 28px; }
+  .section-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    margin: 0 0 6px;
+  }
+  h2 {
+    font-family: 'Noto Serif TC', serif;
+    font-weight: 700;
+    font-size: 26px;
+    margin: 0 0 8px;
+    color: var(--jade-deep);
+  }
+  .lede { color: var(--ink-soft); font-size: 15px; max-width: 62ch; margin: 0; }
+
+  /* POLICY CARDS */
+  .policy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  @media (max-width: 720px) { .policy-grid { grid-template-columns: 1fr; } }
+
+  .pcard {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 24px;
+    position: relative;
+  }
+  .pcard.risk { border-top: 4px solid var(--brick); }
+  .pcard.stable { border-top: 4px solid var(--jade); }
+  .pcard-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .risk .pcard-tag { background: var(--brick-soft); color: var(--brick); }
+  .stable .pcard-tag { background: #E4EEE6; color: var(--jade-deep); }
+  .pcard h3 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 19px;
+    margin: 0 0 4px;
+  }
+  .pcard .policy-no {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-soft);
+    margin: 0 0 16px;
+  }
+  .kv-list { list-style: none; margin: 0; padding: 0; }
+  .kv-list li {
+    display: flex; justify-content: space-between; gap: 12px;
+    padding: 9px 0;
+    border-bottom: 1px dashed var(--line);
+    font-size: 14px;
+  }
+  .kv-list li:last-child { border-bottom: none; }
+  .kv-list .k { color: var(--ink-soft); }
+  .kv-list .v { font-family: 'JetBrains Mono', monospace; font-weight: 500; text-align: right; }
+  .flag {
+    margin-top: 16px; padding: 10px 12px;
+    background: var(--brick-soft); color: var(--brick);
+    border-radius: 3px; font-size: 13px; line-height: 1.5;
+  }
+  .flag.good { background: #E4EEE6; color: var(--jade-deep); }
+
+  /* GAP BARS */
+  .gap-block { background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 26px 24px; margin-bottom: 16px; }
+  .gap-title { font-weight: 700; font-size: 15px; margin: 0 0 4px; }
+  .gap-desc { font-size: 13.5px; color: var(--ink-soft); margin: 0 0 18px; }
+  .bar-row { margin-bottom: 16px; }
+  .bar-row:last-child { margin-bottom: 0; }
+  .bar-label {
+    display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 6px;
+  }
+  .bar-label .name { color: var(--ink-soft); }
+  .bar-label .amt { font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+  .bar-track { height: 12px; background: #EEE9DD; border-radius: 100px; overflow: hidden; }
+  .bar-fill { height: 100%; border-radius: 100px; }
+  .bar-fill.current { background: var(--brick); }
+  .bar-fill.suggested { background: var(--jade); }
+  .bar-fill.gap-marker { background: repeating-linear-gradient(135deg, var(--gold), var(--gold) 4px, transparent 4px, transparent 8px); }
+
+  /* TABLE */
+  .tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+  th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--line); }
+  thead th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    background: #EFEAE0;
+    white-space: nowrap;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  td.num { font-family: 'JetBrains Mono', monospace; }
+  td.hl { color: var(--jade-deep); font-weight: 700; }
+  td.neg { color: var(--brick); font-weight: 700; }
+  tbody tr:hover { background: #FAF8F3; }
+
+  /* RECOMMEND */
+  .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 20px; }
+  @media (max-width: 720px) { .rec-grid { grid-template-columns: 1fr; } }
+  .rec-card {
+    background: var(--jade-deep); color: var(--paper);
+    border-radius: 4px; padding: 22px;
+  }
+  .rec-card.alt { background: var(--card); color: var(--ink); border: 1px solid var(--line); }
+  .rec-num {
+    font-family: 'JetBrains Mono', monospace; font-size: 12px;
+    color: #B7D4C1; margin: 0 0 8px;
+  }
+  .rec-card.alt .rec-num { color: var(--gold); }
+  .rec-card h4 { font-family: 'Noto Serif TC', serif; font-size: 17px; margin: 0 0 10px; }
+  .rec-card p { font-size: 13.5px; margin: 0; color: #DCE9DC; }
+  .rec-card.alt p { color: var(--ink-soft); }
+
+  .steps { list-style: none; margin: 0; padding: 0; counter-reset: step; }
+  .steps li {
+    counter-increment: step;
+    padding: 16px 0 16px 44px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+    font-size: 14.5px;
+  }
+  .steps li:last-child { border-bottom: none; }
+  .steps li::before {
+    content: counter(step);
+    position: absolute; left: 0; top: 14px;
+    width: 26px; height: 26px;
+    background: var(--jade); color: var(--paper);
+    border-radius: 50%;
+    font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .steps strong { color: var(--jade-deep); }
+
+  footer {
+    text-align: center; padding: 40px 24px 20px;
+    font-size: 12px; color: var(--ink-soft);
+    border-top: 1px solid var(--line); margin-top: 40px;
+  }
+
+  .disclaimer {
+    font-size: 12px; color: var(--ink-soft); background: #EFEAE0;
+    border-radius: 4px; padding: 14px 16px; margin-top: 24px; line-height: 1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">保單健檢報告 · Policy Review</p>
+    <h1>王彭森先生<br>危疾 × 醫療保障分析</h1>
+    <p class="sub">兩份現有保單 vs 保誠新方案建議 — 用作與客戶會面討論之用，非正式建議書。</p>
+    <div class="profile-row">
+      <span class="chip">現年 58 歲 · 男</span>
+      <span class="chip">貨幣：美元</span>
+      <span class="chip">保單生效：2016年8月</span>
+      <span class="chip">已供款 10 年</span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- SECTION 1: CURRENT POLICIES -->
+  <section id="current">
+    <div class="section-head">
+      <p class="section-num">01 / 現有保單總覽</p>
+      <h2>兩份保單，兩種風險</h2>
+      <p class="lede">同樣是危疾保障，結構卻完全不同 — 一份即將加價，一份保費已鎖定。</p>
+    </div>
+
+    <div class="policy-grid">
+      <div class="pcard risk">
+        <span class="pcard-tag">需優先處理</span>
+        <h3>「十年期危疾無憂」</h3>
+        <p class="policy-no">保單 000204266661</p>
+        <ul class="kv-list">
+          <li><span class="k">產品性質</span><span class="v">Term 定期危疾</span></li>
+          <li><span class="k">危疾保額</span><span class="v">US$45,000 ／ ~HK$360,000</span></li>
+          <li><span class="k">現時年繳保費</span><span class="v">US$691.90 ／ ~HK$5,535</span></li>
+          <li><span class="k">保費調整</span><span class="v">每 10 年一次</span></li>
+          <li><span class="k">下次調整</span><span class="v">2026 年（今年）</span></li>
+          <li><span class="k">現金價值</span><span class="v">無 / 接近零</span></li>
+        </ul>
+        <div class="flag">通波仔只賠 10%（封頂 US$12,500 ／ ~HK$100,000）；原位癌只賠 10%；開胸手術先賠 100%，不包微創治療</div>
+      </div>
+
+      <div class="pcard stable">
+        <span class="pcard-tag">建議保留</span>
+        <h3>「守護百分百」</h3>
+        <p class="policy-no">保單 000204266696</p>
+        <ul class="kv-list">
+          <li><span class="k">產品性質</span><span class="v">20 年供款終身危疾</span></li>
+          <li><span class="k">危疾保額</span><span class="v">US$45,000 ／ ~HK$360,000</span></li>
+          <li><span class="k">現時年繳保費</span><span class="v">US$2,543.50 ／ ~HK$20,348</span></li>
+          <li><span class="k">供款年期</span><span class="v">供至 2036 年</span></li>
+          <li><span class="k">第 10 年現金價值</span><span class="v">US$2,835 ／ ~HK$22,680</span></li>
+          <li><span class="k">醫療附加</span><span class="v">樂康全面保 計劃1</span></li>
+        </ul>
+        <div class="flag good">三級分層賠償（20% / 50% / 100%），保費已鎖定不會再加，現金價值持續累積</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: GAP ANALYSIS -->
+  <section id="gap">
+    <div class="section-head">
+      <p class="section-num">02 / 保障缺口分析</p>
+      <h2>缺口在哪裡？</h2>
+      <p class="lede">危疾保額本身不算太離譜，真正的缺口在住院雜費與手術費的每次上限。</p>
+    </div>
+
+    <div class="gap-block">
+      <p class="gap-title">危疾總保額 vs 香港危疾實際醫療開支</p>
+      <p class="gap-desc">兩份保單合共危疾保額約 US$90,000 ／ ~HK$720,000，對比嚴重疾病實際開支：</p>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">現有危疾總保額</span><span class="amt">~HK$700,000</span></div>
+        <div class="bar-track"><div class="bar-fill current" style="width:35%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">香港嚴重疾病平均醫療 + 康復開支（參考區間）</span><span class="amt">HK$1,000,000–2,000,000+</span></div>
+        <div class="bar-track"><div class="bar-fill gap-marker" style="width:100%"></div></div>
+      </div>
+    </div>
+
+    <div class="gap-block">
+      <p class="gap-title">住院雜費 — 每次住院上限</p>
+      <p class="gap-desc">「樂康全面保」計劃1 的雜費上限，對比保誠新方案的年度／終身額度。</p>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">現有：樂康全面保 計劃1（每次住院）</span><span class="amt">US$1,250 ／ ~HK$10,000</span></div>
+        <div class="bar-track"><div class="bar-fill current" style="width:8%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">摯稱心（普通病房，每保單年度）</span><span class="amt">HK$16,000</span></div>
+        <div class="bar-track"><div class="bar-fill suggested" style="width:45%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">摯稱心 + 額外醫療計劃（超出後再賠 80%，每年每傷病上限）</span><span class="amt">HK$16,000 + HK$100,000</span></div>
+        <div class="bar-track"><div class="bar-fill suggested" style="width:82%"></div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span class="name">尚賓 VIP（每年 / 終身）</span><span class="amt">全數賠償，不設分項上限</span></div>
+        <div class="bar-track"><div class="bar-fill suggested" style="width:100%"></div></div>
+      </div>
+      <p class="lede" style="margin-top:12px; font-size:12.5px;">* 摯稱心單一保障項目用完 HK$16,000 後，額外醫療計劃會就超出金額再賠 80%，每保單年度每傷病上限 HK$100,000（普通病房；半私家 HK$200,000／私家 HK$400,000），終身不設上限。實際上兩層合計後，摯稱心嘅雜費保障遠高於現有保單，亦高於單睇基本計劃嘅印象。</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: CI COMPARISON -->
+  <section id="ci-compare">
+    <div class="section-head">
+      <p class="section-num">03 / 危疾保障比較</p>
+      <h2>「誠保一生」補上什麼？</h2>
+      <p class="lede">現有兩份危疾都是「攞一次就完」，「誠保一生」的設計是「攞完之後仲有」。</p>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>比較項目</th><th>保單A（十年期）</th><th>保單B（守護百分百）</th><th>誠保一生</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>分層賠償</td><td class="neg">幾乎只有 100%</td><td>三級：20% / 50% / 100%</td><td class="hl">兒童 + 早期(20–25%) + 嚴重(100%)</td></tr>
+          <tr><td>通波仔（冠狀動脈血管成形術）</td><td class="neg">10%，封頂 US$12,500 ／ ~HK$100,000</td><td>20%</td><td class="hl">25% 基本保額</td></tr>
+          <tr><td>索償嚴重疾病後</td><td class="neg">保單完結</td><td class="neg">保單完結</td><td class="hl">延伸保障：額外最多 900%（分疾病組別）</td></tr>
+          <tr><td>索償後人壽保障</td><td>—</td><td>—</td><td class="hl">存活1年後，人壽延伸保障 100%</td></tr>
+          <tr><td>腦退化症 / 柏金遜</td><td>一次性 100%</td><td>一次性 100%</td><td class="hl">終身年金，每年 6% 基本保額，直至身故</td></tr>
+          <tr><td>保費豁免</td><td>無</td><td>無</td><td class="hl">早期索償豁免1年；嚴重疾病索償豁免全部往後保費</td></tr>
+          <tr><td>現金價值</td><td class="neg">接近零</td><td>有，持續累積</td><td>有保證現金價值 + 非保證特別紅利</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MEDICAL COMPARISON -->
+  <section id="med-compare">
+    <div class="section-head">
+      <p class="section-num">04 / 醫療保障比較</p>
+      <h2>摯稱心 vs 尚賓 vs 現有</h2>
+      <p class="lede">兩個保誠方案，一個主打「VHIS 可扣稅、性價比高」，一個主打「全數賠償、冇分項上限」。</p>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>比較項目</th><th>現有（計劃1）</th><th>摯稱心 EasyChoice</th><th>尚賓 VIP</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>終身保障上限</td><td class="neg">每次住院設限</td><td class="hl">不設上限</td><td>年1,200萬 / 終身5,600萬</td></tr>
+          <tr><td>住院雜費</td><td class="neg">US$1,250 ／ ~HK$10,000（每次住院）</td><td>HK$16,000（每年）</td><td class="hl">全數賠償</td></tr>
+          <tr><td>手術費</td><td class="neg">US$5,250 ／ ~HK$42,000（每次住院）</td><td>按手術分級，最高 HK$50,000</td><td class="hl">全數賠償</td></tr>
+          <tr><td>非手術癌症治療（化療/ 標靶）</td><td>未列明</td><td>HK$80,000／年</td><td class="hl">全數賠償</td></tr>
+          <tr><td>診斷成像（MRI/CT）</td><td>未列明</td><td>網絡中心可豁免共同保險</td><td class="hl">全數賠償</td></tr>
+          <tr><td>雜項開支超額保障</td><td>—</td><td class="hl">額外醫療計劃：超出上限後再賠 80%，每年每傷病上限 HK$100,000（普通病房），終身不設上限</td><td>不適用（本身已全數賠償）</td></tr>
+          <tr><td>VHIS 稅務扣除</td><td>—</td><td class="hl">合資格，每年上限 $8,000</td><td class="hl">合資格，每年上限 $8,000</td></tr>
+          <tr><td>保障地域</td><td>—</td><td>全球（精神科限香港）</td><td>可選亞洲或全球（美國除外）</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SECTION 5: BUDGET -->
+  <section id="budget">
+    <div class="section-head">
+      <p class="section-num">05 / 預算與供款</p>
+      <h2>每月大約要準備幾多？</h2>
+      <p class="lede">危疾（10年供款）保費鎖定不變；醫療保費會隨年齡調整，以下為第一年參考金額（美元為保單貨幣，港元約數按 8 兌換率換算，僅供參考）。</p>
+    </div>
+
+    <div class="tbl-wrap" style="margin-bottom:18px;">
+      <table>
+        <thead>
+          <tr><th>方案</th><th>年繳（美元）</th><th>年繳（約港元）</th><th>每月平均（美元）</th><th>每月平均（約港元）</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>誠保一生 CIM3（10年供款）</td><td class="num hl">US$6,364.80</td><td class="num hl">~HK$50,918</td><td class="num hl">US$530.40</td><td class="num hl">~HK$4,243</td></tr>
+          <tr><td>摯稱心 EasyChoice</td><td class="num">US$1,562.22</td><td class="num">~HK$12,498</td><td class="num">US$130.19</td><td class="num">~HK$1,042</td></tr>
+          <tr><td>尚賓 VIP（US$2,500 自付費）</td><td class="num">US$2,302.90</td><td class="num">~HK$18,423</td><td class="num">US$191.91</td><td class="num">~HK$1,535</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="policy-grid">
+      <div class="pcard stable">
+        <span class="pcard-tag">組合一</span>
+        <h3>誠保一生 + 摯稱心</h3>
+        <ul class="kv-list">
+          <li><span class="k">年繳合計</span><span class="v">US$7,927.02 ／ ~HK$63,416</span></li>
+          <li><span class="k">每月平均</span><span class="v">US$660.59 ／ ~HK$5,285</span></li>
+        </ul>
+        <div class="flag good">性價比方案：VHIS 認可，合資格保費每年可扣稅 HK$8,000</div>
+      </div>
+      <div class="pcard stable">
+        <span class="pcard-tag">組合二</span>
+        <h3>誠保一生 + 尚賓 VIP</h3>
+        <ul class="kv-list">
+          <li><span class="k">年繳合計</span><span class="v">US$8,667.70 ／ ~HK$69,342</span></li>
+          <li><span class="k">每月平均</span><span class="v">US$722.31 ／ ~HK$5,778</span></li>
+        </ul>
+        <div class="flag good">保障更闊：住院及手術全數賠償，不設分項上限</div>
+      </div>
+    </div>
+    <p class="lede" style="margin-top:14px; font-size:13px;">* 港元約數按 US$1 = HK$8 換算，僅供預算參考，並非保單結算匯率。醫療保費第一年後會因應舅父實際年齡及計劃續保時的保費率調整，並非保證不變；實際保費以核保結果為準。</p>
+  </section>
+
+  <!-- SECTION 5: RECOMMENDATION -->
+  <section id="recommend">
+    <div class="section-head">
+      <p class="section-num">06 / 建議方向</p>
+      <h2>補充，而非取代</h2>
+      <p class="lede">兩份舊保單性質不同，處理方法也應該不同。</p>
+    </div>
+
+    <div class="rec-grid">
+      <div class="rec-card">
+        <p class="rec-num">保單A · 十年期危疾無憂</p>
+        <h4>優先處理</h4>
+        <p>2026年即將重新計價，保費大機會上升；產品本身沒有現金價值，長遠只會越供越貴。建議評估退保／取代的可行性。</p>
+      </div>
+      <div class="rec-card alt">
+        <p class="rec-num">保單B · 守護百分百</p>
+        <h4>建議保留</h4>
+        <p>保費已鎖定，現金價值持續累積中，三級分層設計本身不差。缺口在附加醫療的雜費／手術費上限，適合用新方案「補強」而非整份取代。</p>
+      </div>
+    </div>
+
+    <div class="tbl-wrap" style="margin-bottom:24px;">
+      <ol class="steps">
+        <li><strong>核實健康狀況</strong> — 舅父現時有沒有新增病歷（三高、體檢異常等），這是決定新單能否順利承保的關鍵，也決定舊單值不值得保留。</li>
+        <li><strong>先傾缺口，後傾產品</strong> — 用「危疾保額夠唔夠應付而家嘅醫療開支」開場，而非「轉唔轉保誠」。</li>
+        <li><strong>新單批核後先處理舊單</strong> — 特別係保單A，唔好喺新單未批出之前退保，避免保障真空期。</li>
+        <li><strong>走足合規程序</strong> — 如最終決定替代，需簽署保單替代聲明，列明現有保單將會失去的利益（如現金價值）。</li>
+      </ol>
+    </div>
+
+    <div class="disclaimer">
+      本文件為內部會面討論用途，僅根據現有保單文件及保誠公開產品資料整理，並非正式建議書或保單條款。實際保障內容、賠償金額及核保結果，以保單條款及保誠最終批核為準。所有醫療及危疾相關表述均為一般性參考，並非保證性語言。
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
