@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>醫療儲備 + 傳承方案</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans TC', sans-serif;
+    background: #f4f2ee;
+    color: #1a1a1a;
+    line-height: 1.8;
+    font-size: 16px;
+    padding: 20px 0 3rem 0;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  }
+
+  /* header */
+  .header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 2rem 1.75rem 1.5rem 1.75rem;
+  }
+  .header .eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b8925a;
+    margin-bottom: .5rem;
+  }
+  .header h1 {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+  .header p {
+    font-size: 15px;
+    color: rgba(255,255,255,.7);
+    margin-top: .6rem;
+  }
+  .accent-bar { height: 4px; background: #b8925a; }
+
+  /* client info box */
+  .client-box {
+    margin: 1.5rem 1.75rem 0 1.75rem;
+    background: #fdfaf5;
+    border: 1px solid #f0ece6;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    font-size: 15.5px;
+    color: #1a1a1a;
+  }
+  .client-box b { font-weight: 700; color: #b8925a; }
+
+  /* sections */
+  .section { padding: 1.75rem 1.75rem 0.5rem 1.75rem; }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-size: 19px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: .9rem;
+    padding-bottom: .6rem;
+    border-bottom: 2px solid #1a1a1a;
+  }
+  .section-title .num {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    background: #1a1a1a;
+    color: #fff;
+    font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .section p { font-size: 16px; margin-bottom: .8rem; }
+  .section ul, .section ol { margin: 0 0 .8rem 1.2rem; font-size: 16px; }
+  .section li { margin-bottom: .4rem; }
+
+  /* quote / script box */
+  .script-box {
+    background: #e8f2f2;
+    border-left: 3px solid #2d6b6b;
+    border-radius: 0 6px 6px 0;
+    padding: .9rem 1.1rem;
+    font-size: 15.5px;
+    color: #1a1a1a;
+    margin: .8rem 0 1.2rem 0;
+  }
+  .script-box .label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #2d6b6b;
+    letter-spacing: .5px;
+    margin-bottom: .3rem;
+    text-transform: uppercase;
+  }
+
+  /* comparison table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin: .5rem 0 1.2rem 0;
+  }
+  th {
+    background: #1a1a1a;
+    color: #fff;
+    font-weight: 600;
+    text-align: left;
+    padding: .6rem .7rem;
+  }
+  th:first-child { border-radius: 6px 0 0 0; }
+  th:last-child { border-radius: 0 6px 0 0; }
+  td {
+    padding: .6rem .7rem;
+    border-bottom: 1px solid #f0ece6;
+    vertical-align: top;
+  }
+  tr:nth-child(even) td { background: #fdfaf5; }
+  td:first-child { color: #555; width: 26%; font-weight: 500; }
+  .hl { color: #2d6b6b; font-weight: 700; }
+
+  /* callout */
+  .callout {
+    background: #1a1a1a;
+    color: #fff;
+    border-radius: 8px;
+    padding: 1.1rem 1.25rem;
+    margin: .8rem 0 1.2rem 0;
+    font-size: 16px;
+  }
+  .callout b { color: #b8925a; }
+
+  /* two-column card */
+  .cards { display: flex; gap: .9rem; margin: .5rem 0 1.2rem 0; flex-wrap: wrap; }
+  .card {
+    flex: 1 1 260px;
+    border: 1px solid #f0ece6;
+    border-radius: 8px;
+    padding: 1rem 1.1rem;
+  }
+  .card h4 {
+    font-family: 'Noto Serif TC', serif;
+    color: #1a1a1a;
+    font-size: 16px;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-bottom: 2px solid #b8925a;
+  }
+  .card ul { margin-left: 1.1rem; font-size: 14.5px; }
+  .card li { margin-bottom: .3rem; }
+
+  /* flow steps */
+  .flow { counter-reset: step; margin: .5rem 0 1rem 0; }
+  .flow-item {
+    display: flex;
+    gap: .8rem;
+    margin-bottom: .9rem;
+  }
+  .flow-num {
+    counter-increment: step;
+    width: 26px; height: 26px;
+    background: #b8925a;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .flow-item .flow-num::before { content: counter(step); }
+  .flow-text { font-size: 16px; }
+  .flow-text b { color: #1a1a1a; }
+
+  .note {
+    font-size: 13.5px;
+    color: #888;
+    border-top: 1px solid #f0ece6;
+    margin: 1.5rem 1.75rem 0 1.75rem;
+    padding: 1rem 0;
+  }
+
+  .footer {
+    background: #1a1a1a;
+    color: rgba(255,255,255,.5);
+    font-size: 12.5px;
+    padding: 1rem 1.75rem;
+    margin-top: 1.5rem;
+    line-height: 1.7;
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .wrap { max-width: 100%; box-shadow: none; }
+  }
+  @media (max-width: 480px) {
+    .cards { flex-direction: column; }
+    table { font-size: 12px; }
+    td, th { padding: .5rem; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div class="eyebrow">會計師媽媽 · 客戶方案筆記</div>
+    <h1>醫療儲備 + 傳承方案</h1>
+    <p>世譽財富 Prime Eternity　vs　保誠信守明天 TRST</p>
+  </div>
+  <div class="accent-bar"></div>
+
+  <div class="client-box">
+    <b>客人代號：</b>客人A（女性，下次生日74歲）。已有基本半私家房醫保，病歷問題投保唔到高端醫療。家境唔錯，對「儲蓄產品」有戒心。獨女（38歲，收入唔錯）。<br><br>
+    <b>兩個計劃投保年齡都夠用</b>（世譽財富上限75歲、信守明天上限80歲），唔使委任後備受保人，正常投保就得，唔使擔心核保踩界。
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">·</span>方向</div>
+    <p>呢次唔賣「增值」，賣「醫療儲備」同「傳承」。身故賠償嗰part先係客人呢個年紀真正著數嘅地方，唔係複利增長。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">1</span>兩個計劃講咩</div>
+    <div class="cards">
+      <div class="card">
+        <h4>世譽財富</h4>
+        <ul>
+          <li>一次過整付保費，即刻有<b>85%保證現金價值</b></li>
+          <li>美元計價，最低US$10,000</li>
+          <li>投保後唔使再供錢</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h4>信守明天</h4>
+        <ul>
+          <li>供3年或5年，6種貨幣任揀（港元/美元/人民幣都得）</li>
+          <li>第5個保單年度起有<b>自主入息</b>——自動每年/每月出一筆錢畀指定人，做「醫療零用金」好方便</li>
+          <li>頭5年多一重意外身故額外保障</li>
+        </ul>
+      </div>
+    </div>
+    <p>客人想一筆過搞掂、唔使再供錢——揀世譽財富。想貨幣更靈活、又想要個自動出糧功能方便日常醫療使費——揀信守明天。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">2</span>醫療儲備點講</div>
+    <p>呢筆錢唔係醫療保險，唔會直接賠住院費，但可以當係一個「隨時攞得返、保證唔會蝕」嘅後備水塘：</p>
+    <ul>
+      <li>保證現金價值一投保就有，唔使等</li>
+      <li>要用錢就部分退保，或者攞保單貸款（最多攞保證現金價值80%，保單照生效）</li>
+      <li>信守明天仲有自動出糧選項，操作上更方便</li>
+    </ul>
+    <div class="script-box">
+      <div class="label">同客人講</div>
+      呢筆錢唔係擺喺度死收息，係擺喺度做你嘅醫療後備隊，隨時攞得返，又保證唔會少過你放落去嘅錢。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">3</span>幾時可以轉受保人／轉持有人</div>
+    <p>呢part係女兒最關心嘅位。</p>
+    <table>
+      <tr><th>時間點</th><th>世譽財富</th><th>信守明天</th></tr>
+      <tr><td>委任後續持有人</td><td>第1個保單周年日起</td><td class="hl">一投保即可</td></tr>
+      <tr><td>委任後備受保人</td><td>第1個保單周年日起</td><td>第1個保單周年日起</td></tr>
+      <tr><td>更換受保人</td><td>第1個保單周年日起，無限次</td><td>第1個保單周年日起，無限次</td></tr>
+    </table>
+    <p>投保後好快就可以安排定：萬一客人唔喺度，個保單自動由女兒接手，唔會斷、唔會失效，唔使入遺產程序、唔使等好耐。</p>
+    <div class="script-box">
+      <div class="label">同客人講</div>
+      投保後第一年就可以將阿女設做後備持有人，將來就算你唔喺度，個保單都會自動過畀阿女，唔會斷。
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">4</span>身故賠償——真正重點</div>
+    <p>複利增長需要時間滾，74歲先投保，時間根本唔夠去博果啲非保證紅利。<b>但身故賠償嘅保證下限，一投保就鎖定，唔使等</b>：</p>
+    <div class="callout">
+      世譽財富　保證賠返最少 <b>已繳保費 101%</b><br>
+      信守明天　保證賠返最少 <b>已繳保費 105%</b>
+    </div>
+    <p>即係話：呢筆錢自己攞嚟做醫療儲備；用唔晒、萬一身故，就保證自動放大最少一成幾畀女兒。呢個「保證」先係74歲客人應該望嘅嘢，唔係果啲要等30年先滾大嘅非保證紅利。</p>
+    <div class="script-box">
+      <div class="label">同客人講</div>
+      你依家個年紀，唔使諗住呢筆錢會點樣長線增值，時間唔係你朋友。呢張保單好嘅地方係：你自己用得到就攞嚟做醫療儲備；用唔晒身故嗰刻，就保證多返一成幾畀阿女，唔使博市場，一投保就鎖定咗。呢個係確定性，唔係增長，先啱你依家嘅需要。
+    </div>
+    <p>如果客人怕呢筆錢女兒一次過攞晒亂使，可以講：兩個計劃都可以設定身故賠償點分——一筆過、分期、或者等女兒有咩人生大事先派，唔一定要一次過畀晒。</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title"><span class="num">5</span>開會流程建議</div>
+    <div class="flow">
+      <div class="flow-item"><div class="flow-num"></div><div class="flow-text"><b>問財務缺口：</b>而家份半私家房醫保之外，如果要做手術或者長期照顧，有冇後備現金？</div></div>
+      <div class="flow-item"><div class="flow-num"></div><div class="flow-text"><b>講保證現金價值同提取彈性</b>（唔提「投資」「複利」）</div></div>
+      <div class="flow-item"><div class="flow-num"></div><div class="flow-text"><b>講轉受保人／持有人嘅時間表</b>——投保好快就可以安排女兒接手</div></div>
+      <div class="flow-item"><div class="flow-num"></div><div class="flow-text"><b>收尾殺手鐧：</b>身故賠償保證放大101%-105%，唔使博市場，比現金定存實在</div></div>
+    </div>
+  </div>
+
+  <div class="note">
+    以上兩個計劃嘅非保證紅利、投資組合等內容，因客人年紀關係刻意淡化，只作背景了解，唔應該喺客人面前作為賣點呈現。
+  </div>
+
+  <div class="footer">
+    內部工作筆記，僅供顧問參考，不構成正式產品建議書。實際保障內容以保誠官方保單條款及核保結果為準。
+  </div>
+
+</div>
+</body>
+</html>
