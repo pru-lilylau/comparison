@@ -4,160 +4,193 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>醫療儲備 + 傳承方案</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap');
+  :root{
+    --cream:#F5EDE0;
+    --coral:#C9956B;
+    --coral-deep:#B8845A;
+    --mint:#D6E8D5;
+    --mint-deep:#2A5A2E;
+    --gold:#F0D9A8;
+    --gold-deep:#8C6A1E;
+    --ink:#3D2B1A;
+    --ink-soft:#6B4E35;
+    --white:#FFFCF8;
+    --shadow: 0 8px 24px rgba(61,43,26,0.08);
+    --shadow-hover: 0 12px 32px rgba(61,43,26,0.14);
+    --radius: 28px;
+  }
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
   body {
     font-family: 'Noto Sans TC', sans-serif;
-    background: #f4f2ee;
-    color: #1a1a1a;
+    background: var(--cream);
+    color: var(--ink);
     line-height: 1.8;
     font-size: 16px;
-    padding: 20px 0 3rem 0;
+    padding: 20px 14px 40px;
   }
   .wrap {
-    max-width: 760px;
+    max-width: 720px;
     margin: 0 auto;
-    background: #fff;
-    border-radius: 16px;
+    background: var(--white);
+    border-radius: var(--radius);
     overflow: hidden;
-    box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-hover);
   }
 
   /* header */
   .header {
-    background: #1a1a1a;
+    background: var(--ink);
     color: #fff;
-    padding: 2rem 1.75rem 1.5rem 1.75rem;
+    padding: clamp(1.5rem, 5vw, 2rem) clamp(1.2rem, 5vw, 1.75rem) 1.5rem;
   }
   .header .eyebrow {
-    font-size: 11px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #b8925a;
-    margin-bottom: .5rem;
+    display: inline-block;
+    background: var(--white);
+    color: var(--coral-deep);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: .8rem;
   }
   .header h1 {
-    font-family: 'Noto Serif TC', serif;
-    font-size: 26px;
-    font-weight: 700;
+    font-size: clamp(22px, 6vw, 28px);
+    font-weight: 900;
+    letter-spacing: .5px;
     line-height: 1.4;
   }
   .header p {
-    font-size: 15px;
-    color: rgba(255,255,255,.7);
+    font-size: clamp(13px, 3.6vw, 15px);
+    color: rgba(255,255,255,.75);
     margin-top: .6rem;
+    overflow-wrap: break-word;
   }
-  .accent-bar { height: 4px; background: #b8925a; }
+  .accent-bar { height: 4px; background: var(--coral); }
 
   /* client info box */
   .client-box {
-    margin: 1.5rem 1.75rem 0 1.75rem;
-    background: #fdfaf5;
-    border: 1px solid #f0ece6;
-    border-radius: 8px;
+    margin: 1.5rem clamp(1.2rem, 5vw, 1.75rem) 0;
+    background: var(--cream);
+    border-radius: 18px;
     padding: 1rem 1.25rem;
     font-size: 15.5px;
-    color: #1a1a1a;
+    color: var(--ink);
   }
-  .client-box b { font-weight: 700; color: #b8925a; }
+  .client-box b { font-weight: 700; color: var(--coral-deep); }
 
   /* sections */
-  .section { padding: 1.75rem 1.75rem 0.5rem 1.75rem; }
+  .section { padding: 1.75rem clamp(1.2rem, 5vw, 1.75rem) 0.5rem; }
   .section-title {
     display: flex;
     align-items: center;
     gap: .6rem;
-    font-size: 19px;
+    font-size: 13px;
     font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: .9rem;
-    padding-bottom: .6rem;
-    border-bottom: 2px solid #1a1a1a;
+    color: var(--coral-deep);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding-bottom: .7rem;
+    border-bottom: 1px solid var(--cream);
   }
   .section-title .num {
-    width: 28px; height: 28px;
+    width: 26px; height: 26px;
     border-radius: 50%;
-    background: #1a1a1a;
+    background: var(--mint-deep);
     color: #fff;
-    font-size: 14px;
+    font-size: 12.5px;
+    font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
   }
-  .section p { font-size: 16px; margin-bottom: .8rem; }
+  .section p { font-size: 16px; margin-bottom: .8rem; overflow-wrap: break-word; }
   .section ul, .section ol { margin: 0 0 .8rem 1.2rem; font-size: 16px; }
   .section li { margin-bottom: .4rem; }
 
   /* quote / script box */
   .script-box {
-    background: #e8f2f2;
-    border-left: 3px solid #2d6b6b;
-    border-radius: 0 6px 6px 0;
+    background: var(--mint);
+    border-radius: 16px;
     padding: .9rem 1.1rem;
     font-size: 15.5px;
-    color: #1a1a1a;
+    color: var(--ink);
     margin: .8rem 0 1.2rem 0;
   }
   .script-box .label {
     font-size: 12px;
     font-weight: 700;
-    color: #2d6b6b;
+    color: var(--mint-deep);
     letter-spacing: .5px;
     margin-bottom: .3rem;
     text-transform: uppercase;
   }
 
   /* comparison table */
+  .table-scroll {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin: .5rem 0 1.2rem 0;
+    border-radius: 12px;
+  }
   table {
     width: 100%;
+    min-width: 460px;
     border-collapse: collapse;
     font-size: 14.5px;
-    margin: .5rem 0 1.2rem 0;
   }
   th {
-    background: #1a1a1a;
+    background: var(--ink);
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;
     padding: .6rem .7rem;
+    white-space: nowrap;
   }
-  th:first-child { border-radius: 6px 0 0 0; }
-  th:last-child { border-radius: 0 6px 0 0; }
+  th:first-child { border-radius: 10px 0 0 0; }
+  th:last-child { border-radius: 0 10px 0 0; }
   td {
     padding: .6rem .7rem;
-    border-bottom: 1px solid #f0ece6;
+    border-bottom: 1px solid var(--cream);
     vertical-align: top;
   }
-  tr:nth-child(even) td { background: #fdfaf5; }
-  td:first-child { color: #555; width: 26%; font-weight: 500; }
-  .hl { color: #2d6b6b; font-weight: 700; }
+  tr:nth-child(even) td { background: var(--cream); }
+  td:first-child { color: var(--ink-soft); width: 26%; font-weight: 500; }
+  .hl { color: var(--mint-deep); font-weight: 700; }
 
   /* callout */
   .callout {
-    background: #1a1a1a;
+    background: var(--ink);
     color: #fff;
-    border-radius: 8px;
+    border-radius: 18px;
     padding: 1.1rem 1.25rem;
     margin: .8rem 0 1.2rem 0;
     font-size: 16px;
   }
-  .callout b { color: #b8925a; }
+  .callout b { color: var(--gold); }
 
   /* two-column card */
   .cards { display: flex; gap: .9rem; margin: .5rem 0 1.2rem 0; flex-wrap: wrap; }
   .card {
-    flex: 1 1 260px;
-    border: 1px solid #f0ece6;
-    border-radius: 8px;
+    flex: 1 1 240px;
+    background: var(--white);
+    border: 1px solid #F2ECE1;
+    border-radius: 18px;
+    box-shadow: var(--shadow);
     padding: 1rem 1.1rem;
   }
   .card h4 {
-    font-family: 'Noto Serif TC', serif;
-    color: #1a1a1a;
+    color: var(--ink);
     font-size: 16px;
+    font-weight: 700;
     margin-bottom: .5rem;
     padding-bottom: .5rem;
-    border-bottom: 2px solid #b8925a;
+    border-bottom: 2px solid var(--coral);
   }
   .card ul { margin-left: 1.1rem; font-size: 14.5px; }
   .card li { margin-bottom: .3rem; }
@@ -172,32 +205,32 @@
   .flow-num {
     counter-increment: step;
     width: 26px; height: 26px;
-    background: #b8925a;
+    background: var(--mint-deep);
     color: #fff;
     border-radius: 50%;
-    font-size: 13px;
+    font-size: 12.5px;
     font-weight: 700;
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0;
     margin-top: 2px;
   }
   .flow-item .flow-num::before { content: counter(step); }
-  .flow-text { font-size: 16px; }
-  .flow-text b { color: #1a1a1a; }
+  .flow-text { font-size: 16px; overflow-wrap: break-word; }
+  .flow-text b { color: var(--ink); }
 
   .note {
     font-size: 13.5px;
-    color: #888;
-    border-top: 1px solid #f0ece6;
-    margin: 1.5rem 1.75rem 0 1.75rem;
+    color: var(--ink-soft);
+    border-top: 1px dashed var(--cream);
+    margin: 1.5rem clamp(1.2rem, 5vw, 1.75rem) 0;
     padding: 1rem 0;
   }
 
   .footer {
-    background: #1a1a1a;
-    color: rgba(255,255,255,.5);
+    background: var(--ink);
+    color: rgba(255,255,255,.55);
     font-size: 12.5px;
-    padding: 1rem 1.75rem;
+    padding: 1rem clamp(1.2rem, 5vw, 1.75rem);
     margin-top: 1.5rem;
     line-height: 1.7;
   }
@@ -207,8 +240,9 @@
     .wrap { max-width: 100%; box-shadow: none; }
   }
   @media (max-width: 480px) {
+    body { padding: 12px 8px 32px; }
     .cards { flex-direction: column; }
-    table { font-size: 12px; }
+    table { font-size: 12.5px; }
     td, th { padding: .5rem; }
   }
 </style>
@@ -285,12 +319,14 @@
   <div class="section">
     <div class="section-title"><span class="num">3</span>幾時可以轉受保人／轉持有人</div>
     <p>呢part係女兒最關心嘅位。</p>
-    <table>
-      <tr><th>時間點</th><th>世譽財富</th><th>信守明天</th></tr>
-      <tr><td>委任後續持有人</td><td>第1個保單周年日起</td><td class="hl">一投保即可</td></tr>
-      <tr><td>委任後備受保人</td><td>第1個保單周年日起</td><td>第1個保單周年日起</td></tr>
-      <tr><td>更換受保人</td><td>第1個保單周年日起，無限次</td><td>第1個保單周年日起，無限次</td></tr>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <tr><th>時間點</th><th>世譽財富</th><th>信守明天</th></tr>
+        <tr><td>委任後續持有人</td><td>第1個保單周年日起</td><td class="hl">一投保即可</td></tr>
+        <tr><td>委任後備受保人</td><td>第1個保單周年日起</td><td>第1個保單周年日起</td></tr>
+        <tr><td>更換受保人</td><td>第1個保單周年日起，無限次</td><td>第1個保單周年日起，無限次</td></tr>
+      </table>
+    </div>
     <p>投保後好快就可以安排定：萬一客人唔喺度，個保單自動由女兒接手，唔會斷、唔會失效，唔使入遺產程序、唔使等好耐。</p>
     <div class="script-box">
       <div class="label">同客人講</div>
