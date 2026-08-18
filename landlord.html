@@ -89,6 +89,14 @@
     background:var(--cream);
     overflow:hidden;
   }
+  .hero-avatar{
+    width:104px; height:104px; border-radius:50%;
+    background:var(--coral); box-shadow:var(--shadow);
+    display:flex; align-items:center; justify-content:center;
+    font-size:40px; color:#fff; overflow:hidden;
+    margin:0 auto 20px; border:3px solid var(--white);
+  }
+  .hero-avatar img{width:100%; height:100%; object-fit:cover; display:block;}
   .eyebrow{
     display:inline-block;
     background:var(--white);
@@ -349,13 +357,13 @@
 <!-- HERO -->
 <section class="hero">
   <div class="wrap">
+    <div class="hero-avatar"><img src="assets/lily.jpg" alt="Lily Lau" onerror="this.parentElement.textContent='👩‍💻'"></div>
     <div class="eyebrow">🏠 業主保障計劃</div>
     <h1>出租緊層樓？<br>你可能唔知自己有<span>幾大風險</span></h1>
     <p class="sub">香港持牌會計師 × 保誠保險顧問<br>幫業主搞掂財物、租金、法律責任三大風險</p>
     <div class="avatar-row">
       <div class="avatar-chip">👩‍💻 15年會計背景</div>
       <div class="avatar-chip">🛡️ 保誠持牌顧問</div>
-      <div class="avatar-chip">🏠 業主保障專家</div>
     </div>
     <a href="#eligibility" class="cta-btn">🔍 睇下我層樓啱唔啱買</a>
   </div>
