@@ -225,6 +225,14 @@
     background:#F7EFE0; border-left:4px solid var(--butter-deep);
     border-radius:12px; padding:14px 18px; font-size:14.5px; margin-bottom:14px;
   }
+  .exclusion-list{display:grid; gap:10px;}
+  .exclusion-item{
+    background:var(--white); box-shadow:var(--shadow); border-left:4px solid var(--terracotta-deep);
+    border-radius:14px; padding:14px 18px; font-size:14.5px; display:flex; align-items:flex-start; gap:10px;
+  }
+  .exclusion-item .exc-icon{flex-shrink:0; font-size:16px; line-height:1.5;}
+  .claims-cta{margin-top:18px; text-align:center;}
+  .claims-cta .cta-btn{font-size:15px; padding:14px 28px;}
 
   /* ---------- calculator ---------- */
   #calculator{background:var(--cream); border-radius:48px; margin:0 16px;}
@@ -638,36 +646,44 @@
     <div class="section-head">
       <div class="tag">Claims Process</div>
       <h2>索償流程（3步曲）</h2>
-      <p>發生事故唔使慌，跟住做就得</p>
+      <p>發生事故唔使慌，唔使自己一個人搞，即刻搵返我</p>
     </div>
     <div class="priority-list">
       <div class="priority-item">
         <div class="step-num">1</div>
         <div>
-          <div class="pi-name">事故發生後</div>
-          <p class="pi-reason">財物損毀/盜竊 → 即刻報警攞事件報告</p>
-          <p class="pi-reason">涉及第三者（例如漏水）→ 立即通知保誠，唔好私自同對方講賠償</p>
+          <div class="pi-name">即刻WhatsApp搵我</div>
+          <p class="pi-reason">財物損毀/盜竊 → 先報警攞事件報告，再WhatsApp我張報告相</p>
+          <p class="pi-reason">涉及第三者（例如漏水）→ 唔好私自同對方講賠償，交低比我同你部署</p>
         </div>
       </div>
       <div class="priority-item">
         <div class="step-num">2</div>
         <div>
-          <div class="pi-name">31日內申請</div>
-          <p class="pi-reason">透過 myPrudential App 或 eClaims 上載文件</p>
+          <div class="pi-name">我幫你跟進申請</div>
+          <p class="pi-reason">我會幫你收齊所需文件，喺31日內代你遞交索償申請，全程唔使自己一個人喺app度摸索</p>
         </div>
       </div>
       <div class="priority-item">
         <div class="step-num">3</div>
         <div>
           <div class="pi-name">等候審批</div>
-          <p class="pi-reason">一般10個工作天內回覆</p>
+          <p class="pi-reason">一般10個工作天內有回覆，一有進度我會第一時間通知你</p>
         </div>
       </div>
+    </div>
+
+    <div class="claims-cta">
+      <a class="cta-btn" href="https://wa.me/85260133108?text=Hi%20Lily%EF%BC%8C%E6%88%91%E5%87%BA%E7%A7%9F%E7%89%A9%E6%A5%AD%E5%87%BA%E5%92%97%E4%BA%8B%EF%BC%8C%E6%83%B3%E6%90%B5%E4%BD%A0%E5%B9%AB%E6%89%8B%E8%99%95%E7%90%86%E7%B4%A2%E5%84%9F" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2zm5.8 14.14c-.24.68-1.4 1.31-1.93 1.35-.5.05-1.02.15-3.32-.72-2.79-1.06-4.61-3.88-4.75-4.06-.14-.18-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.73-.35.18 0 .37.002.53.01.17.008.4-.065.62.47.24.58.81 2 .88 2.15.07.15.12.32.02.5-.1.18-.15.29-.29.45-.14.16-.3.36-.43.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
+        出事即刻WhatsApp搵我
+      </a>
     </div>
 
     <details class="acc" style="margin-top:22px;">
       <summary><span class="summary-left"><span class="item-emoji">📁</span><span class="item-text">索償所需文件清單</span></span><span class="chevron">▾</span></summary>
       <div class="acc-body">
+        <p>唔使自己一個人搞，準備齊呢啲文件WhatsApp比我，我幫你跟進遞交：</p>
         <h4>🏠 家居財物</h4>
         <p>事件報告、損毀相片、維修報價、原有購買單據</p>
         <h4>💸 租金損失（拖租）</h4>
@@ -689,12 +705,14 @@
       <h2>主要不保事項提醒</h2>
       <p>投保前了解清楚，避免索償時失望</p>
     </div>
-    <div class="lily-tip">連續45日無人居住/未出租（天災除外）</div>
-    <div class="lily-tip">業主/家人蓄意行為或疏忽</div>
-    <div class="lily-tip">裝修/翻新期間嘅承辦工程損失（業主法律責任保障不保）</div>
-    <div class="lily-tip">自然損耗（蟲蛀、生鏽、發霉）</div>
-    <div class="lily-tip">傳染病/COVID-19相關</div>
-    <div class="lily-tip" style="margin-bottom:0;">租約無效時發生嘅事故</div>
+    <div class="exclusion-list">
+      <div class="exclusion-item"><span class="exc-icon">🏚️</span><span>連續45日無人居住/未出租（天災除外）</span></div>
+      <div class="exclusion-item"><span class="exc-icon">🙅</span><span>業主/家人蓄意行為或疏忽</span></div>
+      <div class="exclusion-item"><span class="exc-icon">🛠️</span><span>裝修/翻新期間嘅承辦工程損失（業主法律責任保障不保）</span></div>
+      <div class="exclusion-item"><span class="exc-icon">🦟</span><span>自然損耗（蟲蛀、生鏽、發霉）</span></div>
+      <div class="exclusion-item"><span class="exc-icon">😷</span><span>傳染病/COVID-19相關</span></div>
+      <div class="exclusion-item"><span class="exc-icon">📄</span><span>租約無效時發生嘅事故</span></div>
+    </div>
   </div>
 </section>
 
