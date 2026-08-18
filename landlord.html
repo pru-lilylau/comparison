@@ -149,8 +149,8 @@
   }
 
   /* ---------- section shell ---------- */
-  section{position:relative; padding:44px 0;}
-  .section-head{text-align:center; max-width:600px; margin:0 auto 36px;}
+  section{position:relative; padding:32px 0;}
+  .section-head{text-align:center; max-width:600px; margin:0 auto 28px;}
   .section-head .tag{
     font-size:13px; font-weight:700; color:var(--ink-soft);
     text-transform:uppercase; letter-spacing:2px;
@@ -163,24 +163,25 @@
   @media (max-width:720px){.pillar-grid{grid-template-columns:1fr;}}
   .pillar-card{
     background:var(--white); border-radius:22px; box-shadow:var(--shadow);
-    padding:24px; text-decoration:none; color:var(--ink); display:block;
+    padding:24px; text-decoration:none; color:var(--ink);
+    display:flex; flex-direction:column;
     transition:transform .2s ease, box-shadow .2s ease;
   }
   .pillar-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-hover);}
   .pillar-emoji{font-size:32px; margin-bottom:12px;}
   .pillar-card h4{margin:0 0 6px; font-size:16px;}
   .pillar-card p{margin:0; font-size:14.5px; color:var(--ink-soft);}
-  .pillar-card .pillar-cta{display:inline-block; margin-top:12px; font-size:13px; font-weight:700; color:var(--coral-deep);}
+  .pillar-card .pillar-cta{display:inline-block; margin-top:auto; padding-top:12px; font-size:13px; font-weight:700; color:var(--coral-deep);}
 
   /* ---------- comparison / data tables ---------- */
   .table-wrap{overflow-x:auto; border-radius:20px; box-shadow:var(--shadow); background:var(--white); -webkit-overflow-scrolling:touch;}
   .cmp-table{width:100%; border-collapse:collapse; margin:0; font-size:14.5px; table-layout:fixed;}
   .cmp-table th, .cmp-table td{padding:12px 14px; text-align:left; border-bottom:1px solid #F0EAE0; word-break:break-word;}
   .cmp-table th{background:var(--cream); font-weight:700;}
-  .cmp-table td.num, .cmp-table th.num{text-align:right; font-variant-numeric:tabular-nums;}
+  .cmp-table td.num, .cmp-table th.num{text-align:right; font-variant-numeric:tabular-nums; word-break:keep-all;}
   .cmp-table tr:last-child td{border-bottom:none;}
   .cmp-table.wide{table-layout:auto; min-width:480px;}
-  .cmp-table:not(.wide) th:first-child, .cmp-table:not(.wide) td:first-child{width:44%;}
+  .cmp-table:not(.wide) th:first-child, .cmp-table:not(.wide) td:first-child{width:38%;}
   .table-hint{display:none; font-size:12.5px; color:var(--ink-soft); text-align:center; margin:8px 0 0;}
   .plan-tag{display:inline-block; margin-left:6px; background:var(--coral); color:#fff; font-size:10.5px; padding:2px 8px; border-radius:10px; vertical-align:middle;}
 
@@ -337,11 +338,11 @@
   /* ---------- mobile spacing fix ---------- */
   @media (max-width:640px){
     .only-mobile{display:inline;}
-    section{padding:32px 0;}
-    .hero{padding:40px 0 24px;}
+    section{padding:24px 0;}
+    .hero{padding:36px 0 20px;}
     .wrap{padding:0 18px;}
     #about{margin-top:18px; padding:20px;}
-    .section-head{margin-bottom:24px;}
+    .section-head{margin-bottom:20px;}
     details.acc summary{padding:16px 16px; gap:10px; font-size:15px; align-items:flex-start;}
     .summary-left{white-space:normal; flex:1; min-width:0; line-height:1.4;}
     .chevron{width:24px; height:24px; font-size:12px; margin-top:2px;}
@@ -351,6 +352,10 @@
     .cmp-table th, .cmp-table td{padding:10px 8px;}
     .cmp-table.wide{min-width:420px;}
     .table-hint{display:block;}
+  }
+  @media (max-width:360px){
+    .cmp-table{font-size:12.5px;}
+    .cmp-table th, .cmp-table td{padding:9px 6px;}
   }
 </style>
 </head>
@@ -623,7 +628,7 @@
     <div class="table-wrap">
       <table class="cmp-table">
         <tr><th>情況</th><th>自負金額</th></tr>
-        <tr><td>水漬損失</td><td>$250 或損失10%（以較高者為準）</td></tr>
+        <tr><td>水濕損失</td><td>$250 或損失10%（以較高者為準）</td></tr>
         <tr><td>油漆/牆紙損毀</td><td>$1,000 或損失10%（以較高者為準）</td></tr>
         <tr><td>其他家居財物損失</td><td>$250</td></tr>
         <tr><td>樓宇結構損失</td><td>$3,000（火災/爆炸引致可獲豁免）</td></tr>
@@ -756,7 +761,7 @@
         </a>
       </div>
     </div>
-    <p class="disclaimer">此頁面只作參考及教育用途，並不構成保單合約之一部分。實際保障範圍、條款及不保事項，請以保單條款正本為準。如有查詢，請聯絡你的保誠理財顧問。</p>
+    <p class="disclaimer">此頁面只作參考及教育用途，並不構成保單合約之一部分。實際保障範圍、條款及不保事項，請以保單條款正本為準。如有查詢，歡迎WhatsApp或IG聯絡我。</p>
   </div>
 </footer>
 
