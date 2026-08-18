@@ -143,7 +143,7 @@
     text-transform:uppercase; letter-spacing:2px;
   }
   .section-head h2{font-size:clamp(24px,4vw,34px); margin:10px 0 12px;}
-  .section-head p{color:var(--ink-soft); font-size:15px;}
+  .section-head p{color:var(--ink-soft); font-size:16px;}
 
   /* ---------- content pillars ---------- */
   .pillar-grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr);}
@@ -156,16 +156,19 @@
   .pillar-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-hover);}
   .pillar-emoji{font-size:32px; margin-bottom:12px;}
   .pillar-card h4{margin:0 0 6px; font-size:16px;}
-  .pillar-card p{margin:0; font-size:13.5px; color:var(--ink-soft);}
-  .pillar-card .pillar-cta{display:inline-block; margin-top:12px; font-size:12.5px; font-weight:700; color:var(--coral-deep);}
+  .pillar-card p{margin:0; font-size:14.5px; color:var(--ink-soft);}
+  .pillar-card .pillar-cta{display:inline-block; margin-top:12px; font-size:13px; font-weight:700; color:var(--coral-deep);}
 
   /* ---------- comparison / data tables ---------- */
-  .table-wrap{overflow-x:auto; border-radius:20px; box-shadow:var(--shadow); background:var(--white);}
-  .cmp-table{width:100%; border-collapse:collapse; margin:0; font-size:13.5px; min-width:480px;}
-  .cmp-table th, .cmp-table td{padding:12px 14px; text-align:left; border-bottom:1px solid #F0EAE0;}
+  .table-wrap{overflow-x:auto; border-radius:20px; box-shadow:var(--shadow); background:var(--white); -webkit-overflow-scrolling:touch;}
+  .cmp-table{width:100%; border-collapse:collapse; margin:0; font-size:14.5px; table-layout:fixed;}
+  .cmp-table th, .cmp-table td{padding:12px 14px; text-align:left; border-bottom:1px solid #F0EAE0; word-break:break-word;}
   .cmp-table th{background:var(--cream); font-weight:700;}
   .cmp-table td.num, .cmp-table th.num{text-align:right; font-variant-numeric:tabular-nums;}
   .cmp-table tr:last-child td{border-bottom:none;}
+  .cmp-table.wide{table-layout:auto; min-width:480px;}
+  .cmp-table:not(.wide) th:first-child, .cmp-table:not(.wide) td:first-child{width:44%;}
+  .table-hint{display:none; font-size:12.5px; color:var(--ink-soft); text-align:center; margin:8px 0 0;}
   .plan-tag{display:inline-block; margin-left:6px; background:var(--coral); color:#fff; font-size:10.5px; padding:2px 8px; border-radius:10px; vertical-align:middle;}
 
   /* ---------- resource categories / accordion ---------- */
@@ -176,7 +179,7 @@
     font-size:26px; flex-shrink:0; color:#fff;
   }
   .cat-title{font-size:21px; margin:0;}
-  .cat-desc{font-size:13.5px; color:var(--ink-soft); margin:2px 0 0;}
+  .cat-desc{font-size:14.5px; color:var(--ink-soft); margin:2px 0 0;}
 
   .cat.household .cat-icon{background:var(--coral);}
   .cat.rent .cat-icon{background:var(--mint-deep);}
@@ -204,21 +207,23 @@
     font-size:14px;
   }
   details.acc[open] .chevron{transform:rotate(180deg);}
-  .acc-body{padding:0 24px 26px; font-size:14.5px; color:var(--ink);}
-  .acc-body h4{margin:18px 0 8px; font-size:15px;}
+  .acc-body{padding:0 24px 26px; font-size:15.5px; color:var(--ink);}
+  .acc-body h4{margin:18px 0 8px; font-size:16px;}
   .acc-body p{margin:6px 0;}
+  .acc-body ul{margin:6px 0; padding-left:20px;}
+  .acc-body li{margin:4px 0;}
   .mini-tip{
-    background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:13px; margin-top:10px;
+    background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:14px; margin-top:10px;
   }
   .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
-  .pill{background:var(--cream); border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600;}
+  .pill{background:var(--cream); border-radius:999px; padding:6px 14px; font-size:13.5px; font-weight:600;}
   .teaser-list{display:grid; gap:10px; margin-top:8px;}
-  .teaser-item{background:var(--cream); border-radius:14px; padding:12px 16px; font-size:13.5px; color:var(--ink);}
+  .teaser-item{background:var(--cream); border-radius:14px; padding:12px 16px; font-size:14.5px; color:var(--ink);}
   .teaser-item b{display:block; margin-bottom:2px;}
 
   .lily-tip{
     background:#F7EFE0; border-left:4px solid var(--butter-deep);
-    border-radius:12px; padding:14px 18px; font-size:13.5px; margin-bottom:14px;
+    border-radius:12px; padding:14px 18px; font-size:14.5px; margin-bottom:14px;
   }
 
   /* ---------- calculator ---------- */
@@ -238,8 +243,8 @@
     font-family:inherit; color:var(--ink); transition:all .2s ease;
     display:flex; flex-direction:column; gap:2px;
   }
-  .quiz-opt strong{font-size:15px;}
-  .quiz-opt small{color:var(--ink-soft); font-size:12px;}
+  .quiz-opt strong{font-size:15.5px;}
+  .quiz-opt small{color:var(--ink-soft); font-size:13px;}
   .quiz-opt:hover{border-color:var(--mint-deep); background:#F3FBF8;}
   .quiz-opt.selected{border-color:var(--coral-deep); background:#FBF3EA;}
   .toggle-row{display:flex; align-items:center; gap:10px; background:var(--cream); border-radius:14px; padding:14px 18px; margin-top:8px;}
@@ -259,8 +264,8 @@
     display:inline-block; background:var(--coral); color:var(--white);
     padding:10px 24px; border-radius:999px; font-weight:700; font-size:18px; margin-bottom:10px;
   }
-  .result-note{font-size:12.5px; color:var(--ink-soft);}
-  .calc-warn{background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:12.5px; margin-top:12px; text-align:left;}
+  .result-note{font-size:13.5px; color:var(--ink-soft);}
+  .calc-warn{background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:13.5px; margin-top:12px; text-align:left;}
 
   /* ---------- claim steps ---------- */
   .priority-list{display:grid; gap:12px; margin-bottom:8px;}
@@ -272,8 +277,8 @@
     flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--coral); color:#fff;
     display:flex; align-items:center; justify-content:center; font-weight:900; font-size:15px;
   }
-  .priority-item .pi-name{font-weight:700; font-size:15.5px; margin-bottom:4px;}
-  .priority-item .pi-reason{font-size:13.5px; color:var(--ink-soft); margin:0;}
+  .priority-item .pi-name{font-weight:700; font-size:16px; margin-bottom:4px;}
+  .priority-item .pi-reason{font-size:14.5px; color:var(--ink-soft); margin:0;}
   .priority-item .pi-reason + .pi-reason{margin-top:4px;}
 
   /* ---------- eligibility ---------- */
@@ -284,7 +289,7 @@
   .elig-card.yes h4{color:var(--mint-deep);}
   .elig-card.no h4{color:var(--coral-deep);}
   .elig-list{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
-  .elig-list li{font-size:14px; padding-left:24px; position:relative;}
+  .elig-list li{font-size:15px; padding-left:24px; position:relative;}
   .elig-card.yes .elig-list li::before{content:"✅"; position:absolute; left:0;}
   .elig-card.no .elig-list li::before{content:"❌"; position:absolute; left:0;}
 
@@ -299,7 +304,7 @@
   .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
   .final-cta .cta-btn{background:var(--coral);}
   .final-cta .cta-btn.ghost{background:rgba(255,255,255,0.95); color:var(--ink);}
-  .disclaimer{font-size:12px; color:var(--ink-soft); max-width:600px; margin:0 auto; padding:0 24px;}
+  .disclaimer{font-size:13px; color:var(--ink-soft); max-width:600px; margin:0 auto; padding:0 24px;}
   .back-link{display:block; text-align:center; font-size:13px; font-weight:700; color:var(--ink-soft); text-decoration:none; padding-top:8px;}
   .back-link:hover{color:var(--coral-deep);}
 
@@ -315,11 +320,15 @@
     .hero{padding:40px 0 24px;}
     .wrap{padding:0 18px;}
     .section-head{margin-bottom:24px;}
-    details.acc summary{padding:16px 16px; gap:10px; font-size:14px; align-items:flex-start;}
+    details.acc summary{padding:16px 16px; gap:10px; font-size:15px; align-items:flex-start;}
     .summary-left{white-space:normal; flex:1; min-width:0; line-height:1.4;}
     .chevron{width:24px; height:24px; font-size:12px; margin-top:2px;}
     .quiz-options{grid-template-columns:1fr;}
     .quiz-card{padding:24px 20px;}
+    .cmp-table{font-size:13.5px;}
+    .cmp-table th, .cmp-table td{padding:10px 8px;}
+    .cmp-table.wide{min-width:420px;}
+    .table-hint{display:block;}
   }
 </style>
 </head>
@@ -387,7 +396,7 @@
       <table class="cmp-table">
         <tr><th>保障項目</th><th class="num">計劃 1</th><th class="num">計劃 2</th></tr>
         <tr><td>家居財物保障</td><td class="num">每年 $500,000</td><td class="num">每年 $1,500,000</td></tr>
-        <tr><td>租金損失保障（最長6個月）</td><td class="num">每年 $120,000<br><span style="color:var(--ink-soft); font-size:12px;">每月上限 $20,000</span></td><td class="num">每年 $240,000<br><span style="color:var(--ink-soft); font-size:12px;">每月上限 $40,000</span></td></tr>
+        <tr><td>租金損失保障（最長6個月）</td><td class="num">每年 $120,000<br><span style="color:var(--ink-soft); font-size:13px;">每月上限 $20,000</span></td><td class="num">每年 $240,000<br><span style="color:var(--ink-soft); font-size:13px;">每月上限 $40,000</span></td></tr>
         <tr><td>業主法律責任保障</td><td class="num">每年 $10,000,000</td><td class="num">每年 $10,000,000</td></tr>
         <tr><td>樓宇結構保障（自選）</td><td class="num" colspan="2" style="text-align:center;">投保額（不少於 $500,000）</td></tr>
       </table>
@@ -444,7 +453,7 @@
             <tr><td>更換門鎖及門匙（因盜竊或企圖盜竊）</td><td class="num">$2,000</td><td class="num">$6,000</td></tr>
             <tr><td>清理瓦礫</td><td class="num">$5,000</td><td class="num">$5,000</td></tr>
           </table>
-          <p style="font-size:12.5px; color:var(--ink-soft); margin-top:10px;">室內裝修/翻新工程期間：若總工程費用少於$300,000，工程期少於連續60天，期間嘅意外損毀均受保障。</p>
+          <p style="font-size:13.5px; color:var(--ink-soft); margin-top:10px;">室內裝修/翻新工程期間：若總工程費用少於$300,000，工程期少於連續60天，期間嘅意外損毀均受保障。</p>
         </div>
       </details>
     </div>
@@ -467,7 +476,7 @@
             <div class="teaser-item"><b>司法機構命令</b>受保住所因香港司法機構導致不能進出連續10日或以上</div>
             <div class="teaser-item"><b>租客拖租</b>客戶已採取法律行動追討租金及收回住所，法庭判決後1個月仍未能取回逾期租金</div>
           </div>
-          <p style="font-size:12px; color:var(--ink-soft); margin-top:10px;">^「自殺」指透過從高處躍下、上吊、割腕或燒炭方式自殺，並獲香港特別行政區政府發出嘅文件證實。</p>
+          <p style="font-size:13px; color:var(--ink-soft); margin-top:10px;">^「自殺」指透過從高處躍下、上吊、割腕或燒炭方式自殺，並獲香港特別行政區政府發出嘅文件證實。</p>
           <div class="mini-tip">💡 額外保障：因追討租金及/或收回受保住所而採取法律行動嘅實際費用，都受保障。</div>
         </div>
       </details>
@@ -525,15 +534,16 @@
       <p>跟返官方保費級距表，即時運算</p>
     </div>
 
-    <div class="table-wrap" style="margin-bottom:28px;">
-      <table class="cmp-table">
+    <div class="table-wrap" style="margin-bottom:8px;">
+      <table class="cmp-table wide">
         <tr><th>建築面積(呎)</th><th>實用面積(呎)</th><th class="num">計劃1年保費</th><th class="num">計劃2年保費</th></tr>
         <tr><td>700或以下</td><td>560或以下</td><td class="num">$590</td><td class="num">$840</td></tr>
         <tr><td>701–1,200</td><td>561–960</td><td class="num">$800</td><td class="num">$1,060</td></tr>
         <tr><td>1,201–2,000</td><td>961–1,600</td><td class="num">不適用</td><td class="num">$1,400</td></tr>
       </table>
     </div>
-    <p style="font-size:12.5px; color:var(--ink-soft); text-align:center; margin-top:-16px;">面積超出以上級距，每多100呎另加$62。樓宇結構保障保費：與基本保障同時投保為投保額×0.07%，單獨投保為投保額×0.09%。</p>
+    <p class="table-hint">👉 左右滑動睇晒全部級距</p>
+    <p style="font-size:13.5px; color:var(--ink-soft); text-align:center; margin:12px 0 28px;">面積超出以上級距，每多100呎另加$62。樓宇結構保障保費：與基本保障同時投保為投保額×0.07%，單獨投保為投保額×0.09%。</p>
 
     <div class="quiz-card" style="margin-top:28px;">
       <div class="calc-label">計算方式</div>
