@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>保誠精選「業主寶」｜業主保障方案 · Lily Lau</title>
+<meta name="description" content="出租緊層樓？香港持牌會計師 × 保誠保險顧問 Lily Lau，幫業主睇清楚家居財物、租金損失、法律責任三大風險保障，仲有即時保費計算機。">
+<meta property="og:title" content="保誠精選「業主寶」｜業主保障方案">
+<meta property="og:description" content="出租緊層樓？幫業主搞掂財物、租金、法律責任三大風險，即時計番保費。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pru-lilylau.github.io/comparison/Michelle-Cheung-landlord.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="保誠精選「業主寶」｜業主保障方案">
+<meta name="twitter:description" content="出租緊層樓？幫業主搞掂財物、租金、法律責任三大風險，即時計番保費。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F5EDE0;
+    --coral:#C9956B;
+    --coral-deep:#B8845A;
+    --mint:#D6E8D5;
+    --mint-deep:#2A5A2E;
+    --butter:#FAEEDA;
+    --butter-deep:#633806;
+    --lavender:#E6F1FB;
+    --lavender-deep:#0C447C;
+    --terracotta:#C97B5F;
+    --terracotta-deep:#A85D42;
+    --ink:#3D2B1A;
+    --ink-soft:#6B4E35;
+    --white:#FFFCF8;
+    --shadow: 0 8px 24px rgba(61,43,26,0.08);
+    --shadow-hover: 0 12px 32px rgba(61,43,26,0.14);
+    --radius: 28px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Noto Sans TC', sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.7;
+    overflow-x:hidden;
+  }
+  h1,h2,h3, .display{
+    font-family:'Noto Sans TC', sans-serif;
+    font-weight:900;
+    letter-spacing:0.5px;
+  }
+  a{color:inherit;}
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px;}
+  img{max-width:100%;}
+
+  /* ---------- floating guide button ---------- */
+  #guide{
+    position:fixed;
+    right:18px; bottom:18px;
+    z-index:50;
+    width:64px; height:64px;
+    border-radius:50%;
+    background:#25D366;
+    box-shadow: var(--shadow-hover);
+    display:flex; align-items:center; justify-content:center;
+    font-size:28px;
+    cursor:pointer;
+    text-decoration:none;
+    border:3px solid var(--white);
+    animation: float 3.4s ease-in-out infinite;
+    transition:transform .2s ease;
+  }
+  #guide:hover{transform:scale(1.08);}
+  @keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    #guide{animation:none;}
+    html{scroll-behavior:auto;}
+  }
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative;
+    padding:56px 0 32px;
+    text-align:center;
+    background:var(--cream);
+    overflow:hidden;
+  }
+  .eyebrow{
+    display:inline-block;
+    background:var(--white);
+    padding:8px 20px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+    color:var(--coral-deep);
+    box-shadow:var(--shadow);
+    margin-bottom:24px;
+  }
+  .hero h1{
+    font-size:clamp(32px,6vw,52px);
+    margin:0 0 14px;
+    color:var(--ink);
+  }
+  .hero h1 span{color:var(--coral-deep);}
+  .hero p.sub{
+    font-size:17px;
+    color:var(--ink-soft);
+    max-width:520px;
+    margin:0 auto 34px;
+  }
+  .avatar-row{
+    display:flex; align-items:center; justify-content:center; gap:14px;
+    margin-bottom:36px; flex-wrap:wrap;
+  }
+  .avatar-chip{
+    background:var(--white); border-radius:999px; padding:10px 18px;
+    box-shadow:var(--shadow); font-size:14px; font-weight:700;
+    display:flex; align-items:center; gap:8px;
+  }
+  .cta-btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--ink); color:var(--white);
+    padding:16px 32px; border-radius:999px;
+    font-weight:700; font-size:16px; text-decoration:none;
+    box-shadow:var(--shadow);
+    transition:transform .2s ease, box-shadow .2s ease;
+    border:none; cursor:pointer;
+  }
+  .cta-btn:hover{transform:translateY(-3px); box-shadow:var(--shadow-hover);}
+  .cta-btn.ghost{
+    background:var(--white); color:var(--ink);
+  }
+
+  /* ---------- section shell ---------- */
+  section{position:relative; padding:44px 0;}
+  .section-head{text-align:center; max-width:600px; margin:0 auto 36px;}
+  .section-head .tag{
+    font-size:13px; font-weight:700; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:2px;
+  }
+  .section-head h2{font-size:clamp(24px,4vw,34px); margin:10px 0 12px;}
+  .section-head p{color:var(--ink-soft); font-size:15px;}
+
+  /* ---------- content pillars ---------- */
+  .pillar-grid{display:grid; gap:16px; grid-template-columns:repeat(3,1fr);}
+  @media (max-width:720px){.pillar-grid{grid-template-columns:1fr;}}
+  .pillar-card{
+    background:var(--white); border-radius:22px; box-shadow:var(--shadow);
+    padding:24px; text-decoration:none; color:var(--ink); display:block;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .pillar-card:hover{transform:translateY(-4px); box-shadow:var(--shadow-hover);}
+  .pillar-emoji{font-size:32px; margin-bottom:12px;}
+  .pillar-card h4{margin:0 0 6px; font-size:16px;}
+  .pillar-card p{margin:0; font-size:13.5px; color:var(--ink-soft);}
+  .pillar-card .pillar-cta{display:inline-block; margin-top:12px; font-size:12.5px; font-weight:700; color:var(--coral-deep);}
+
+  /* ---------- comparison / data tables ---------- */
+  .table-wrap{overflow-x:auto; border-radius:20px; box-shadow:var(--shadow); background:var(--white);}
+  .cmp-table{width:100%; border-collapse:collapse; margin:0; font-size:13.5px; min-width:480px;}
+  .cmp-table th, .cmp-table td{padding:12px 14px; text-align:left; border-bottom:1px solid #F0EAE0;}
+  .cmp-table th{background:var(--cream); font-weight:700;}
+  .cmp-table td.num, .cmp-table th.num{text-align:right; font-variant-numeric:tabular-nums;}
+  .cmp-table tr:last-child td{border-bottom:none;}
+  .plan-tag{display:inline-block; margin-left:6px; background:var(--coral); color:#fff; font-size:10.5px; padding:2px 8px; border-radius:10px; vertical-align:middle;}
+
+  /* ---------- resource categories / accordion ---------- */
+  .cat{margin-bottom:32px;}
+  .cat-head{display:flex; align-items:center; gap:14px; margin-bottom:22px;}
+  .cat-icon{
+    width:52px; height:52px; border-radius:16px; display:flex; align-items:center; justify-content:center;
+    font-size:26px; flex-shrink:0; color:#fff;
+  }
+  .cat-title{font-size:21px; margin:0;}
+  .cat-desc{font-size:13.5px; color:var(--ink-soft); margin:2px 0 0;}
+
+  .cat.household .cat-icon{background:var(--coral);}
+  .cat.rent .cat-icon{background:var(--mint-deep);}
+  .cat.liability .cat-icon{background:var(--lavender-deep);}
+  .cat.structure .cat-icon{background:var(--terracotta);}
+
+  details.acc{
+    background:var(--white); border-radius:20px; box-shadow:var(--shadow);
+    margin-bottom:14px; overflow:hidden; border:1px solid #F2ECE1;
+  }
+  details.acc[open]{box-shadow:var(--shadow-hover);}
+  details.acc summary{
+    list-style:none; cursor:pointer; padding:20px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+    font-weight:700; font-size:16px;
+  }
+  details.acc summary::-webkit-details-marker{display:none;}
+  .summary-left{display:flex; align-items:flex-start; gap:10px;}
+  .item-emoji{flex-shrink:0;}
+  .item-text{flex:1; min-width:0;}
+  .chevron{
+    width:28px; height:28px; border-radius:50%; background:var(--cream);
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+    transition:transform .3s ease;
+    font-size:14px;
+  }
+  details.acc[open] .chevron{transform:rotate(180deg);}
+  .acc-body{padding:0 24px 26px; font-size:14.5px; color:var(--ink);}
+  .acc-body h4{margin:18px 0 8px; font-size:15px;}
+  .acc-body p{margin:6px 0;}
+  .mini-tip{
+    background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:13px; margin-top:10px;
+  }
+  .pill-row{display:flex; flex-wrap:wrap; gap:8px; margin:10px 0;}
+  .pill{background:var(--cream); border-radius:999px; padding:6px 14px; font-size:12.5px; font-weight:600;}
+  .teaser-list{display:grid; gap:10px; margin-top:8px;}
+  .teaser-item{background:var(--cream); border-radius:14px; padding:12px 16px; font-size:13.5px; color:var(--ink);}
+  .teaser-item b{display:block; margin-bottom:2px;}
+
+  .lily-tip{
+    background:#F7EFE0; border-left:4px solid var(--butter-deep);
+    border-radius:12px; padding:14px 18px; font-size:13.5px; margin-bottom:14px;
+  }
+
+  /* ---------- calculator ---------- */
+  #calculator{background:var(--cream); border-radius:48px; margin:0 16px;}
+  .quiz-card{
+    background:var(--white); border-radius:var(--radius);
+    padding:32px; box-shadow:var(--shadow); max-width:600px; margin:0 auto;
+  }
+  .calc-label{font-size:13px; font-weight:700; color:var(--mint-deep); margin:18px 0 8px;}
+  .calc-label:first-child{margin-top:0;}
+  .calc-field{width:100%; padding:14px 16px; border-radius:14px; border:2px solid #F0EAE0; background:var(--cream); font-family:inherit; font-size:15px; color:var(--ink);}
+  select.calc-field{appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236B4E35' stroke-width='3'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 16px center;}
+  .quiz-options{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .quiz-opt{
+    text-align:left; border:2px solid #F0EAE0; background:var(--cream);
+    border-radius:18px; padding:14px 18px; cursor:pointer; font-size:15px;
+    font-family:inherit; color:var(--ink); transition:all .2s ease;
+    display:flex; flex-direction:column; gap:2px;
+  }
+  .quiz-opt strong{font-size:15px;}
+  .quiz-opt small{color:var(--ink-soft); font-size:12px;}
+  .quiz-opt:hover{border-color:var(--mint-deep); background:#F3FBF8;}
+  .quiz-opt.selected{border-color:var(--coral-deep); background:#FBF3EA;}
+  .toggle-row{display:flex; align-items:center; gap:10px; background:var(--cream); border-radius:14px; padding:14px 18px; margin-top:8px;}
+  .toggle-row input{width:20px; height:20px; accent-color:var(--coral-deep); flex-shrink:0;}
+  .toggle-row label{font-size:14.5px; font-weight:700; cursor:pointer;}
+  #structureInputWrap{display:none; margin-top:12px;}
+  .calc-btn{
+    width:100%; margin-top:22px; background:var(--ink); color:var(--white);
+    padding:16px; border-radius:999px; border:none; font-weight:700; font-size:16px;
+    cursor:pointer; font-family:inherit; transition:transform .2s ease;
+  }
+  .calc-btn:hover{transform:translateY(-2px);}
+  .calc-result{display:none; margin-top:24px; text-align:center; border-top:1px dashed #E4DBCB; padding-top:22px;}
+  .calc-result.show{display:block; animation:fadeUp .5s ease;}
+  @keyframes fadeUp{from{opacity:0; transform:translateY(14px);} to{opacity:1; transform:translateY(0);}}
+  .result-stage{
+    display:inline-block; background:var(--coral); color:var(--white);
+    padding:10px 24px; border-radius:999px; font-weight:700; font-size:18px; margin-bottom:10px;
+  }
+  .result-note{font-size:12.5px; color:var(--ink-soft);}
+  .calc-warn{background:#F7EFE0; border-radius:12px; padding:10px 14px; font-size:12.5px; margin-top:12px; text-align:left;}
+
+  /* ---------- claim steps ---------- */
+  .priority-list{display:grid; gap:12px; margin-bottom:8px;}
+  .priority-item{
+    display:flex; align-items:flex-start; gap:16px;
+    background:var(--white); border-radius:18px; padding:18px 20px; box-shadow:var(--shadow);
+  }
+  .step-num{
+    flex-shrink:0; width:36px; height:36px; border-radius:50%; background:var(--coral); color:#fff;
+    display:flex; align-items:center; justify-content:center; font-weight:900; font-size:15px;
+  }
+  .priority-item .pi-name{font-weight:700; font-size:15.5px; margin-bottom:4px;}
+  .priority-item .pi-reason{font-size:13.5px; color:var(--ink-soft); margin:0;}
+  .priority-item .pi-reason + .pi-reason{margin-top:4px;}
+
+  /* ---------- eligibility ---------- */
+  .elig-grid{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  @media (max-width:640px){.elig-grid{grid-template-columns:1fr;}}
+  .elig-card{background:var(--white); border-radius:20px; box-shadow:var(--shadow); padding:22px;}
+  .elig-card h4{margin:0 0 12px; font-size:15px;}
+  .elig-card.yes h4{color:var(--mint-deep);}
+  .elig-card.no h4{color:var(--coral-deep);}
+  .elig-list{list-style:none; margin:0; padding:0; display:grid; gap:8px;}
+  .elig-list li{font-size:14px; padding-left:24px; position:relative;}
+  .elig-card.yes .elig-list li::before{content:"✅"; position:absolute; left:0;}
+  .elig-card.no .elig-list li::before{content:"❌"; position:absolute; left:0;}
+
+  /* ---------- footer / final cta ---------- */
+  footer{padding:32px 0 40px; text-align:center;}
+  .final-cta{
+    background:var(--ink);
+    border-radius:40px; padding:52px 24px; color:#fff; margin:0 16px 50px;
+  }
+  .final-cta h2{color:#fff; margin-top:0;}
+  .final-cta p{opacity:0.92; max-width:480px; margin:0 auto 28px;}
+  .cta-row{display:flex; gap:14px; justify-content:center; flex-wrap:wrap;}
+  .final-cta .cta-btn{background:var(--coral);}
+  .final-cta .cta-btn.ghost{background:rgba(255,255,255,0.95); color:var(--ink);}
+  .disclaimer{font-size:12px; color:var(--ink-soft); max-width:600px; margin:0 auto; padding:0 24px;}
+  .back-link{display:block; text-align:center; font-size:13px; font-weight:700; color:var(--ink-soft); text-decoration:none; padding-top:8px;}
+  .back-link:hover{color:var(--coral-deep);}
+
+  ::selection{background:var(--butter); color:var(--ink);}
+  :focus-visible{outline:3px solid var(--coral-deep); outline-offset:2px;}
+
+  .only-mobile{display:none;}
+
+  /* ---------- mobile spacing fix ---------- */
+  @media (max-width:640px){
+    .only-mobile{display:inline;}
+    section{padding:32px 0;}
+    .hero{padding:40px 0 24px;}
+    .wrap{padding:0 18px;}
+    .section-head{margin-bottom:24px;}
+    details.acc summary{padding:16px 16px; gap:10px; font-size:14px; align-items:flex-start;}
+    .summary-left{white-space:normal; flex:1; min-width:0; line-height:1.4;}
+    .chevron{width:24px; height:24px; font-size:12px; margin-top:2px;}
+    .quiz-options{grid-template-columns:1fr;}
+    .quiz-card{padding:24px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<a id="guide" href="https://wa.me/85260133108?text=Hi%20Lily%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%A5%AD%E4%B8%BB%E5%AF%B6%E4%BF%9D%E9%9A%9C%E6%96%B9%E6%A1%88" target="_blank" rel="noopener" title="WhatsApp查詢">
+  <svg viewBox="0 0 24 24" width="30" height="30" fill="#fff"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2zm5.8 14.14c-.24.68-1.4 1.31-1.93 1.35-.5.05-1.02.15-3.32-.72-2.79-1.06-4.61-3.88-4.75-4.06-.14-.18-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.73-.35.18 0 .37.002.53.01.17.008.4-.065.62.47.24.58.81 2 .88 2.15.07.15.12.32.02.5-.1.18-.15.29-.29.45-.14.16-.3.36-.43.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
+</a>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">🏠 業主保障計劃</div>
+    <h1>出租緊層樓？<br>你可能唔知自己有<span>幾大風險</span></h1>
+    <p class="sub">香港持牌會計師 × 保誠保險顧問<br>幫業主搞掂財物、租金、法律責任三大風險</p>
+    <div class="avatar-row">
+      <div class="avatar-chip">👩‍💻 15年會計背景</div>
+      <div class="avatar-chip">🛡️ 保誠持牌顧問</div>
+      <div class="avatar-chip">🏠 業主保障專家</div>
+    </div>
+    <a href="#eligibility" class="cta-btn">🔍 睇下我層樓啱唔啱買</a>
+  </div>
+</section>
+
+<!-- 點解要買 -->
+<section id="why">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Why It Matters</div>
+      <h2>三個問題，你答唔答到？</h2>
+      <p>出租物業唔止收租咁簡單，呢三大風險隨時搞到你破財</p>
+    </div>
+    <div class="pillar-grid">
+      <a class="pillar-card" href="#item1">
+        <div class="pillar-emoji">🔧</div>
+        <h4>「租客整爛屋企嘢，維修費邊個俾？」</h4>
+        <p>家居財物保障，賠傢俬、電器、室內裝修維修或更換費用</p>
+        <span class="pillar-cta">睇家居財物保障 →</span>
+      </a>
+      <a class="pillar-card" href="#item2">
+        <div class="pillar-emoji">💸</div>
+        <h4>「租客走佬/拖租，租金點算？」</h4>
+        <p>租金損失保障，最長6個月，仲有追討租金嘅法律費用</p>
+        <span class="pillar-cta">睇租金損失保障 →</span>
+      </a>
+      <a class="pillar-card" href="#item3">
+        <div class="pillar-emoji">⚖️</div>
+        <h4>「有人喺屋企意外受傷告我？」</h4>
+        <p>業主法律責任保障，最高賠$10,000,000</p>
+        <span class="pillar-cta">睇法律責任保障 →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- 保障一覽表 -->
+<section id="overview">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Coverage at a Glance</div>
+      <h2>保障一覽表</h2>
+      <p>計劃1 vs 計劃2，每保單年度最高賠償額</p>
+    </div>
+    <div class="table-wrap">
+      <table class="cmp-table">
+        <tr><th>保障項目</th><th class="num">計劃 1</th><th class="num">計劃 2</th></tr>
+        <tr><td>家居財物保障</td><td class="num">每年 $500,000</td><td class="num">每年 $1,500,000</td></tr>
+        <tr><td>租金損失保障（最長6個月）</td><td class="num">每年 $120,000<br><span style="color:var(--ink-soft); font-size:12px;">每月上限 $20,000</span></td><td class="num">每年 $240,000<br><span style="color:var(--ink-soft); font-size:12px;">每月上限 $40,000</span></td></tr>
+        <tr><td>業主法律責任保障</td><td class="num">每年 $10,000,000</td><td class="num">每年 $10,000,000</td></tr>
+        <tr><td>樓宇結構保障（自選）</td><td class="num" colspan="2" style="text-align:center;">投保額（不少於 $500,000）</td></tr>
+      </table>
+    </div>
+    <div class="lily-tip" style="margin-top:16px;">💡 Lily Tips：唔知揀計劃1定計劃2？保障額應該覆蓋到家居財物維修/更換嘅費用，同埋租金嘅損失，先至夠貼身。</div>
+  </div>
+</section>
+
+<!-- 四大保障詳細說明 -->
+<section id="details">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Coverage Details</div>
+      <h2>四大保障詳細說明</h2>
+      <p>Click開睇每項保障實際保啲乜</p>
+    </div>
+
+    <!-- 項目一：家居財物保障 -->
+    <div class="cat household" id="item1">
+      <div class="cat-head">
+        <div class="cat-icon">🏠</div>
+        <div>
+          <h3 class="cat-title">家居財物保障</h3>
+          <p class="cat-desc">傢俬、電器、室內裝修意外損毀維修費</p>
+        </div>
+      </div>
+      <details class="acc" open>
+        <summary><span class="summary-left"><span class="item-emoji">📦</span><span class="item-text">基本保障保啲乜？</span></span><span class="chevron">▾</span></summary>
+        <div class="acc-body">
+          <p>全險保障，以「以新易舊」方式賠償，包括：</p>
+          <ul style="margin:6px 0; padding-left:20px;">
+            <li>傢俬、家居用品、電器（屬於業主嘅財物）</li>
+            <li>業主自行添置嘅室內裝修、固定裝置及裝配，例如油漆、牆紙、地板</li>
+            <li>消防員執行任務造成嘅損毀</li>
+            <li>租客惡意破壞導致嘅損失（需要報警，並由警方證明係租客惡意破壞）</li>
+          </ul>
+          <div class="mini-tip">💡 Lily Tips：租客整爛嘢唔一定有保障，一定要留番報警紀錄先可以索償。</div>
+        </div>
+      </details>
+      <details class="acc">
+        <summary><span class="summary-left"><span class="item-emoji">✨</span><span class="item-text">額外保障（自動包埋，唔使加錢）</span></span><span class="chevron">▾</span></summary>
+        <div class="acc-body">
+          <div class="pill-row">
+            <span class="pill">發展商/前業主裝修 $200,000 / $600,000</span>
+            <span class="pill">室內裝修期間意外</span>
+            <span class="pill">短暫寄存 $50,000</span>
+            <span class="pill">更換門鎖門匙 $2,000 / $6,000</span>
+            <span class="pill">清理瓦礫 $5,000</span>
+          </div>
+          <table class="cmp-table" style="margin-top:14px;">
+            <tr><th></th><th class="num">計劃 1</th><th class="num">計劃 2</th></tr>
+            <tr><td>發展商/前業主添置嘅室內裝修</td><td class="num">$200,000</td><td class="num">$600,000</td></tr>
+            <tr><td>短暫寄存（少於連續30天）</td><td class="num">$50,000</td><td class="num">$50,000</td></tr>
+            <tr><td>更換門鎖及門匙（因盜竊或企圖盜竊）</td><td class="num">$2,000</td><td class="num">$6,000</td></tr>
+            <tr><td>清理瓦礫</td><td class="num">$5,000</td><td class="num">$5,000</td></tr>
+          </table>
+          <p style="font-size:12.5px; color:var(--ink-soft); margin-top:10px;">室內裝修/翻新工程期間：若總工程費用少於$300,000，工程期少於連續60天，期間嘅意外損毀均受保障。</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 項目二：租金損失保障 -->
+    <div class="cat rent" id="item2">
+      <div class="cat-head">
+        <div class="cat-icon">💸</div>
+        <div>
+          <h3 class="cat-title">租金損失保障</h3>
+          <p class="cat-desc">最長6個月，租客走佬/拖租都有得保</p>
+        </div>
+      </div>
+      <details class="acc" open>
+        <summary><span class="summary-left"><span class="item-emoji">📋</span><span class="item-text">邊啲情況先保障到？</span></span><span class="chevron">▾</span></summary>
+        <div class="acc-body">
+          <div class="teaser-list">
+            <div class="teaser-item"><b>物業損毀不能居住</b>因家居財物保障範圍內嘅意外損毀，導致單位不能居住</div>
+            <div class="teaser-item"><b>租客身故</b>租客喺受保住所內自殺^或被謀殺而死亡</div>
+            <div class="teaser-item"><b>司法機構命令</b>受保住所因香港司法機構導致不能進出連續10日或以上</div>
+            <div class="teaser-item"><b>租客拖租</b>客戶已採取法律行動追討租金及收回住所，法庭判決後1個月仍未能取回逾期租金</div>
+          </div>
+          <p style="font-size:12px; color:var(--ink-soft); margin-top:10px;">^「自殺」指透過從高處躍下、上吊、割腕或燒炭方式自殺，並獲香港特別行政區政府發出嘅文件證實。</p>
+          <div class="mini-tip">💡 額外保障：因追討租金及/或收回受保住所而採取法律行動嘅實際費用，都受保障。</div>
+        </div>
+      </details>
+    </div>
+
+    <!-- 項目三：業主法律責任保障 -->
+    <div class="cat liability" id="item3">
+      <div class="cat-head">
+        <div class="cat-icon">⚖️</div>
+        <div>
+          <h3 class="cat-title">業主法律責任保障</h3>
+          <p class="cat-desc">第三者意外受傷或財物損失，最高賠$10,000,000</p>
+        </div>
+      </div>
+      <details class="acc" open>
+        <summary><span class="summary-left"><span class="item-emoji">🛡️</span><span class="item-text">保障範圍</span></span><span class="chevron">▾</span></summary>
+        <div class="acc-body">
+          <p>保障客戶身為受保住所嘅業主，因疏忽導致第三者意外身體受傷或財物損失時，所需負上嘅法律責任，每保單年度最高賠償額為 <b>$10,000,000</b>。</p>
+          <p>受保住所內嘅露台、花園、天台或平台，同樣屬於保障範圍。</p>
+        </div>
+      </details>
+    </div>
+
+    <!-- 項目四：樓宇結構保障 -->
+    <div class="cat structure" id="item4">
+      <div class="cat-head">
+        <div class="cat-icon">🧱</div>
+        <div>
+          <h3 class="cat-title">樓宇結構保障（自選）</h3>
+          <p class="cat-desc">全險保障樓宇結構，可獨立投保</p>
+        </div>
+      </div>
+      <details class="acc" open>
+        <summary><span class="summary-left"><span class="item-emoji">🏗️</span><span class="item-text">保障範圍</span></span><span class="chevron">▾</span></summary>
+        <div class="acc-body">
+          <p>為受保住所嘅樓宇結構提供「全險」保障，包括但不限於火災、爆炸、惡意破壞、盜竊、水浸、地陷、山泥傾瀉及落雹等情況所引致嘅樓宇結構損毀，賠償所需嘅維修費或重建費。</p>
+          <p><b>投保額</b>須按重建價值釐定，並不可少於 <b>$500,000</b>。</p>
+          <div class="pill-row">
+            <span class="pill">清理瓦礫 10%投保額</span>
+            <span class="pill">專業顧問費用 10%投保額</span>
+          </div>
+          <div class="mini-tip">💡 著數位：可以選擇單獨投保「樓宇結構保障」，毋須支付額外費用，同時可以獲得「業主法律責任保障」！</div>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- 保費參考表 + 計算機 -->
+<section id="calculator">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Premium Calculator</div>
+      <h2>保費幾多？即刻計番</h2>
+      <p>跟返官方保費級距表，即時運算</p>
+    </div>
+
+    <div class="table-wrap" style="margin-bottom:28px;">
+      <table class="cmp-table">
+        <tr><th>建築面積(呎)</th><th>實用面積(呎)</th><th class="num">計劃1年保費</th><th class="num">計劃2年保費</th></tr>
+        <tr><td>700或以下</td><td>560或以下</td><td class="num">$590</td><td class="num">$840</td></tr>
+        <tr><td>701–1,200</td><td>561–960</td><td class="num">$800</td><td class="num">$1,060</td></tr>
+        <tr><td>1,201–2,000</td><td>961–1,600</td><td class="num">不適用</td><td class="num">$1,400</td></tr>
+      </table>
+    </div>
+    <p style="font-size:12.5px; color:var(--ink-soft); text-align:center; margin-top:-16px;">面積超出以上級距，每多100呎另加$62。樓宇結構保障保費：與基本保障同時投保為投保額×0.07%，單獨投保為投保額×0.09%。</p>
+
+    <div class="quiz-card" style="margin-top:28px;">
+      <div class="calc-label">計算方式</div>
+      <select class="calc-field" id="areaType">
+        <option value="built">建築面積</option>
+        <option value="saleable">實用面積</option>
+      </select>
+
+      <div class="calc-label">面積（平方呎）</div>
+      <input class="calc-field" id="areaValue" type="number" min="1" placeholder="例如：800" inputmode="numeric">
+
+      <div class="calc-label">選擇計劃</div>
+      <div class="quiz-options">
+        <button type="button" class="quiz-opt plan-opt selected" data-plan="1"><strong>計劃 1</strong><small>基本保障</small></button>
+        <button type="button" class="quiz-opt plan-opt" data-plan="2"><strong>計劃 2</strong><small>較高保障</small></button>
+      </div>
+
+      <div class="toggle-row">
+        <input type="checkbox" id="structureToggle">
+        <label for="structureToggle">加購樓宇結構保障（自選）</label>
+      </div>
+      <div id="structureInputWrap">
+        <div class="calc-label">樓宇結構投保額（最少 $500,000）</div>
+        <input class="calc-field" id="structureValue" type="number" min="500000" step="1000" placeholder="例如：5000000" inputmode="numeric">
+      </div>
+
+      <button type="button" class="calc-btn" id="calcBtn">計算年保費</button>
+
+      <div class="calc-result" id="calcResult">
+        <div class="result-stage" id="resultAmount">$0</div>
+        <p class="result-note">預計年保費（不含保監局徵費）</p>
+        <div id="calcWarn"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 自負金額表 -->
+<section id="excess">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Excess</div>
+      <h2>自負金額（簡化版）</h2>
+      <p>每次及每宗損失需要客戶自行負擔嘅金額</p>
+    </div>
+    <div class="table-wrap">
+      <table class="cmp-table">
+        <tr><th>情況</th><th>自負金額</th></tr>
+        <tr><td>水漬損失</td><td>$250 或損失10%（以較高者為準）</td></tr>
+        <tr><td>油漆/牆紙損毀</td><td>$1,000 或損失10%（以較高者為準）</td></tr>
+        <tr><td>其他家居財物損失</td><td>$250</td></tr>
+        <tr><td>樓宇結構損失</td><td>$3,000（火災/爆炸引致可獲豁免）</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 邊啲樓啱買 -->
+<section id="eligibility">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Eligibility</div>
+      <h2>邊啲樓啱買？</h2>
+      <p>投保前，睇下自己層樓合唔合資格</p>
+    </div>
+    <div class="elig-grid">
+      <div class="elig-card yes">
+        <h4>✅ 適用</h4>
+        <ul class="elig-list">
+          <li>私人樓宇</li>
+          <li>政府樓宇（公屋/居屋）</li>
+          <li>村屋（樓齡40年以下）</li>
+        </ul>
+      </div>
+      <div class="elig-card no">
+        <h4>❌ 不接受</h4>
+        <ul class="elig-list">
+          <li>寮屋</li>
+          <li>分租戶（劏房）</li>
+          <li>商業用途物業</li>
+          <li>樓齡超過59年（需另行核保）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="lily-tip" style="margin-top:16px;">💡 Lily Tips：獨立屋、樓齡超過59年嘅樓宇及村屋，未必可以即時網上投保，需要額外提供資料先可以核保，歡迎WhatsApp我幫你查詢。</div>
+  </div>
+</section>
+
+<!-- 索償流程 -->
+<section id="claims">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Claims Process</div>
+      <h2>索償流程（3步曲）</h2>
+      <p>發生事故唔使慌，跟住做就得</p>
+    </div>
+    <div class="priority-list">
+      <div class="priority-item">
+        <div class="step-num">1</div>
+        <div>
+          <div class="pi-name">事故發生後</div>
+          <p class="pi-reason">財物損毀/盜竊 → 即刻報警攞事件報告</p>
+          <p class="pi-reason">涉及第三者（例如漏水）→ 立即通知保誠，唔好私自同對方講賠償</p>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="step-num">2</div>
+        <div>
+          <div class="pi-name">31日內申請</div>
+          <p class="pi-reason">透過 myPrudential App 或 eClaims 上載文件</p>
+        </div>
+      </div>
+      <div class="priority-item">
+        <div class="step-num">3</div>
+        <div>
+          <div class="pi-name">等候審批</div>
+          <p class="pi-reason">一般10個工作天內回覆</p>
+        </div>
+      </div>
+    </div>
+
+    <details class="acc" style="margin-top:22px;">
+      <summary><span class="summary-left"><span class="item-emoji">📁</span><span class="item-text">索償所需文件清單</span></span><span class="chevron">▾</span></summary>
+      <div class="acc-body">
+        <h4>🏠 家居財物</h4>
+        <p>事件報告、損毀相片、維修報價、原有購買單據</p>
+        <h4>💸 租金損失（拖租）</h4>
+        <p>租約副本、土地審裁處申請副本、法律費用收據</p>
+        <h4>⚖️ 業主法律責任</h4>
+        <p>事件報告、補救證明、損毀相片</p>
+        <h4>🧱 樓宇結構</h4>
+        <p>事件報告、維修報價、損毀相片、原有單據</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- 不保事項 -->
+<section id="exclusions">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="tag">Good to Know</div>
+      <h2>主要不保事項提醒</h2>
+      <p>投保前了解清楚，避免索償時失望</p>
+    </div>
+    <div class="lily-tip">連續45日無人居住/未出租（天災除外）</div>
+    <div class="lily-tip">業主/家人蓄意行為或疏忽</div>
+    <div class="lily-tip">裝修/翻新期間嘅承辦工程損失（業主法律責任保障不保）</div>
+    <div class="lily-tip">自然損耗（蟲蛀、生鏽、發霉）</div>
+    <div class="lily-tip">傳染病/COVID-19相關</div>
+    <div class="lily-tip" style="margin-bottom:0;">租約無效時發生嘅事故</div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<footer>
+  <div class="wrap">
+    <div class="final-cta">
+      <h2>想了解你層樓啱唔啱買，或者實際保費幾多？</h2>
+      <p>免費幫你check清楚保障範圍同保費</p>
+      <div class="cta-row">
+        <a class="cta-btn" href="https://wa.me/85260133108?text=Hi%20Lily%EF%BC%8C%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%A5%AD%E4%B8%BB%E5%AF%B6%E4%BF%9D%E9%9A%9C%E6%96%B9%E6%A1%88" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.86 9.86 0 0012.04 2zm5.8 14.14c-.24.68-1.4 1.31-1.93 1.35-.5.05-1.02.15-3.32-.72-2.79-1.06-4.61-3.88-4.75-4.06-.14-.18-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.73-.35.18 0 .37.002.53.01.17.008.4-.065.62.47.24.58.81 2 .88 2.15.07.15.12.32.02.5-.1.18-.15.29-.29.45-.14.16-.3.36-.43.48-.14.13-.29.28-.13.55.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.23 1.38.27.14.43.12.59-.07.16-.19.68-.79.86-1.06.18-.27.36-.22.6-.13.24.09 1.53.72 1.79.85.26.13.43.19.5.3.07.11.07.62-.17 1.3z"/></svg>
+          WhatsApp查詢
+        </a>
+        <a class="cta-btn ghost" href="https://www.instagram.com/pru_lilylau" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.054 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 01-.899 1.382 3.744 3.744 0 01-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 01-1.379-.899 3.644 3.644 0 01-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.42-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg>
+          追蹤 @pru_lilylau
+        </a>
+      </div>
+    </div>
+    <p class="disclaimer">此頁面只作參考及教育用途，並不構成保單合約之一部分。實際保障範圍、條款及不保事項，請以保單條款正本為準。如有查詢，請聯絡你的保誠理財顧問。</p>
+  </div>
+</footer>
+
+<script>
+  // 保費級距表
+  const tiers = {
+    built:    [{max:700, p1:590, p2:840}, {max:1200, p1:800, p2:1060}, {max:2000, p1:null, p2:1400}],
+    saleable: [{max:560, p1:590, p2:840}, {max:960,  p1:800, p2:1060}, {max:1600, p1:null, p2:1400}]
+  };
+  const extraStep = 100;
+  const extraRate = 62;
+
+  let selectedPlan = '1';
+
+  document.querySelectorAll('.plan-opt').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.plan-opt').forEach(b => b.classList.remove('selected'));
+      btn.classList.add('selected');
+      selectedPlan = btn.dataset.plan;
+    });
+  });
+
+  document.getElementById('structureToggle').addEventListener('change', function(){
+    document.getElementById('structureInputWrap').style.display = this.checked ? 'block' : 'none';
+  });
+
+  function calcBasePremium(unit, area){
+    const list = tiers[unit];
+    const lastTier = list[list.length - 1];
+    let notes = [];
+    let plan = selectedPlan;
+
+    // 面積超出計劃1範圍，自動轉用計劃2
+    if(plan === '1'){
+      const p1Tier = list.find(t => area <= t.max && t.p1 !== null);
+      if(!p1Tier){
+        plan = '2';
+        notes.push('面積超出計劃1嘅承保範圍，已自動為你以計劃2計算保費。');
+      }
+    }
+
+    if(area <= lastTier.max){
+      const tier = list.find(t => area <= t.max);
+      const price = plan === '1' ? tier.p1 : tier.p2;
+      return {price, plan, notes};
+    }
+
+    // 超出最大級距，每多100呎加$62（只適用計劃2）
+    if(plan === '1'){
+      plan = '2';
+      notes.push('面積超出級距表範圍，只適用計劃2，已自動為你轉用計劃2計算保費。');
+    }
+    const extraUnits = Math.ceil((area - lastTier.max) / extraStep);
+    const price = lastTier.p2 + extraUnits * extraRate;
+    notes.push('面積超出級距表範圍，已按每多100呎加$' + extraRate + '計算。');
+    return {price, plan, notes};
+  }
+
+  document.getElementById('calcBtn').addEventListener('click', () => {
+    const unit = document.getElementById('areaType').value;
+    const area = parseFloat(document.getElementById('areaValue').value);
+    const warnBox = document.getElementById('calcWarn');
+    warnBox.innerHTML = '';
+
+    if(!area || area <= 0){
+      warnBox.innerHTML = '<div class="calc-warn">請先輸入正確嘅面積數字。</div>';
+      document.getElementById('calcResult').classList.remove('show');
+      return;
+    }
+
+    const base = calcBasePremium(unit, area);
+
+    let structurePremium = 0;
+    if(document.getElementById('structureToggle').checked){
+      let sv = parseFloat(document.getElementById('structureValue').value) || 0;
+      if(sv > 0 && sv < 500000){
+        base.notes.push('樓宇結構投保額最少為$500,000，已按$500,000計算。');
+        sv = 500000;
+      }
+      structurePremium = sv * 0.0007;
+    }
+
+    const total = base.price + structurePremium;
+    document.getElementById('resultAmount').textContent = '預計年保費：$' + total.toLocaleString('en-US', {maximumFractionDigits: 2});
+    document.getElementById('calcResult').classList.add('show');
+
+    if(base.notes.length){
+      warnBox.innerHTML = base.notes.map(n => '<div class="calc-warn">💡 ' + n + '</div>').join('');
+    }
+  });
+</script>
+
+</body>
+</html>
